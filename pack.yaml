@@ -1,0 +1,33 @@
+name: hermes-living-ops-pack
+version: 0.1.0
+status: template-mvp
+summary: Privacy-safe Hermes pack for a Living Operations Library with Librarian, Scout, Autonomous Drive, and Relic Lite profiles.
+hermes_min_version: unknown
+components:
+  library_template: library-template
+  profiles:
+    - ops-librarian
+    - ops-scout
+    - ops-autonomous-drive
+    - ops-relic-lite
+  skills:
+    - ops-librarian
+    - ops-scout
+    - ops-autonomous-drive
+    - ops-relic-lite
+  scripts:
+    - scripts/install_pack.py
+    - scripts/sanitize_check.py
+    - scripts/lint_library.py
+    - scripts/library_preflight.py
+safety_defaults:
+  dry_run_first: true
+  create_crons: false
+  restart_gateway: false
+  change_models_or_providers: false
+  write_active_memory: false
+  publish_external: false
+placeholders:
+  HERMES_HOME: __HERMES_HOME__
+  LIBRARY_NAME: __LIBRARY_NAME__
+  OPERATOR_NAME: __OPERATOR_NAME__

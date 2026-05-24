@@ -1,0 +1,22 @@
+# local/private
+.env
+.env.*
+!.env.example
+*.local
+*.secret
+*.key
+*.pem
+*.p12
+*.sqlite
+*.db
+*.dump
+*.bak
+*.backup
+*.log
+__pycache__/
+.pytest_cache/
+.DS_Store
+
+# install artifacts
+.installed/
+.tmp/

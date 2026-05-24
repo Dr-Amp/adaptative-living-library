@@ -1,0 +1,10 @@
+{
+  "schema_version": "living_ops_signal_v1",
+  "source": "https://example.com/source",
+  "captured_at": "2026-01-01T00:00:00Z",
+  "lane": "agent-ops",
+  "summary": "A fictional source describes a safer preflight pattern for agent answers.",
+  "why_it_matters": "Could reduce repeated mistakes.",
+  "confidence": "medium",
+  "recommended_level": 1
+}

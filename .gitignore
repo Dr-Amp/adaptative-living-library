@@ -1,4 +1,5 @@
 # local/private
+.bmo-lab.json
 .env
 .env.*
 !.env.example

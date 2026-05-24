@@ -14,6 +14,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 TEXT_EXTS = {'.md', '.yaml', '.yml', '.json', '.txt', '.sh', '.ps1', '.py'}
+SKIP_PARTS = {'__pycache__', '.pytest_cache', '.git'}
+SKIP_SUFFIXES = {'.pyc', '.pyo'}
 
 
 def render_text(text: str, target: Path, library_name: str, operator_name: str) -> str:
@@ -26,6 +28,8 @@ def render_text(text: str, target: Path, library_name: str, operator_name: str) 
 def copy_tree(src: Path, dst: Path, *, target: Path, library_name: str, operator_name: str, dry_run: bool, backup_root: Path):
     for item in src.rglob('*'):
         if item.is_dir():
+            continue
+        if any(part in SKIP_PARTS for part in item.parts) or item.suffix in SKIP_SUFFIXES:
             continue
         rel = item.relative_to(src)
         out = dst / rel

@@ -15,7 +15,9 @@ explicit interests + session/memory scan
 
 ## System diagram
 
-![Adaptative Living Library architecture](adaptative-living-library-architecture.svg)
+![Adaptative Living Library architecture as an abandoned Shaolin monastery map](adaptative-living-library-architecture.svg)
+
+The visual language uses a Baoyu-style infographic treatment: isometric map layout, aged parchment tones, abandoned Shaolin monastery motifs, and explicit path colors for collection, canon, proposals, and optional context.
 
 ### Reading the diagram
 

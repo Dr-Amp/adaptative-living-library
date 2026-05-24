@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.3 - 2026-05-24
+
+### Changed
+
+- Reworked the architecture SVG into a Baoyu-inspired infographic with an isometric abandoned Shaolin monastery aesthetic while keeping the README-safe static SVG format.
+
 ## v0.3.2 - 2026-05-24
 
 ### Changed

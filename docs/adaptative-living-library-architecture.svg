@@ -1,208 +1,298 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920" role="img" aria-labelledby="title desc">
-  <title id="title">Adaptative Living Library architecture</title>
-  <desc id="desc">Architecture diagram showing onboarding inputs, raw inbox, Scout, Librarian, canon, preflight, answers, Architect proposals, approval gates, Oracle context, and audit logs.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Adaptative Living Library architecture — abandoned Shaolin monastery map</title>
+  <desc id="desc">A Baoyu-inspired isometric infographic showing the Adaptative Living Library as an abandoned Shaolin monastery: Operator Gate, Onboarding Courtyard, Scout Watchtower, Raw Yard, Librarian Archive Hall, Canon Vault, Preflight Moon Bridge, Answer Pavilion, Architect Forge, Approval Gate, Oracle Shrine, and Ledger Stones.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#020617"/>
-      <stop offset="0.55" stop-color="#0f172a"/>
-      <stop offset="1" stop-color="#111827"/>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17140f"/>
+      <stop offset="0.42" stop-color="#262013"/>
+      <stop offset="1" stop-color="#07110d"/>
     </linearGradient>
-    <radialGradient id="glowCyan" cx="50%" cy="50%" r="60%">
-      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f4e4bc" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#d8b36a" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#d8b36a" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glowEmerald" cx="50%" cy="50%" r="60%">
-      <stop offset="0" stop-color="#34d399" stop-opacity="0.20"/>
-      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    <radialGradient id="mist" cx="50%" cy="50%" r="60%">
+      <stop offset="0" stop-color="#d9d0b1" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#d9d0b1" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.6" opacity="0.65"/>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f2416" stop-opacity="0.94"/>
+      <stop offset="1" stop-color="#19140d" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="roofRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8f2f20"/>
+      <stop offset="1" stop-color="#3d1711"/>
+    </linearGradient>
+    <linearGradient id="roofJade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f8f62"/>
+      <stop offset="1" stop-color="#124130"/>
+    </linearGradient>
+    <linearGradient id="roofIndigo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6052b5"/>
+      <stop offset="1" stop-color="#251a4b"/>
+    </linearGradient>
+    <pattern id="grain" width="120" height="120" patternUnits="userSpaceOnUse">
+      <circle cx="18" cy="24" r="1.1" fill="#f4e4bc" opacity="0.08"/>
+      <circle cx="84" cy="36" r="0.9" fill="#f4e4bc" opacity="0.06"/>
+      <circle cx="52" cy="92" r="1.2" fill="#000" opacity="0.14"/>
+      <path d="M0 34 C36 22 73 44 120 30" fill="none" stroke="#f4e4bc" stroke-width="0.6" opacity="0.05"/>
+      <path d="M0 89 C44 70 78 104 120 82" fill="none" stroke="#000" stroke-width="0.6" opacity="0.10"/>
     </pattern>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000000" flood-opacity="0.38"/>
+    <pattern id="stone" width="42" height="32" patternUnits="userSpaceOnUse">
+      <path d="M0 16 H42 M21 0 V16 M10 16 V32 M32 16 V32" stroke="#6f6248" stroke-width="0.8" opacity="0.55" fill="none"/>
+    </pattern>
+    <filter id="softShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/>
     </filter>
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="inkBleed" x="-8%" y="-8%" width="116%" height="116%">
+      <feGaussianBlur stdDeviation="0.35"/>
     </filter>
-    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
-      <path d="M2,2 L10,6 L2,10 Z" fill="#22d3ee"/>
+    <marker id="arrowGold" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L11,6.5 L1,12 Z" fill="#d8b36a"/>
     </marker>
-    <marker id="arrowEmerald" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
-      <path d="M2,2 L10,6 L2,10 Z" fill="#34d399"/>
+    <marker id="arrowJade" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L11,6.5 L1,12 Z" fill="#68d391"/>
     </marker>
-    <marker id="arrowAmber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
-      <path d="M2,2 L10,6 L2,10 Z" fill="#fbbf24"/>
-    </marker>
-    <marker id="arrowRose" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
-      <path d="M2,2 L10,6 L2,10 Z" fill="#fb7185"/>
+    <marker id="arrowRed" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L11,6.5 L1,12 Z" fill="#f87171"/>
     </marker>
     <style>
-      .title { font: 700 34px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; letter-spacing: -0.04em; }
-      .subtitle { font: 500 16px Inter, ui-sans-serif, system-ui, sans-serif; fill: #94a3b8; }
-      .lane-title { font: 700 14px Inter, ui-sans-serif, system-ui, sans-serif; fill: #cbd5e1; letter-spacing: 0.08em; text-transform: uppercase; }
-      .node-title { font: 800 20px Inter, ui-sans-serif, system-ui, sans-serif; fill: #f8fafc; letter-spacing: -0.02em; }
-      .node-sub { font: 500 13px Inter, ui-sans-serif, system-ui, sans-serif; fill: #cbd5e1; }
-      .tiny { font: 600 11px Inter, ui-sans-serif, system-ui, sans-serif; fill: #94a3b8; }
-      .label { font: 700 12px Inter, ui-sans-serif, system-ui, sans-serif; fill: #e2e8f0; }
-      .pill { font: 700 12px Inter, ui-sans-serif, system-ui, sans-serif; fill: #0f172a; }
-      .arrow { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: 0.92; }
-      .arrow-soft { fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; opacity: 0.72; }
-      .dash { stroke-dasharray: 8 8; }
+      .title { font: 800 36px Georgia, "Times New Roman", serif; fill: #f7e7be; letter-spacing: -0.03em; }
+      .subtitle { font: 500 15px Georgia, "Times New Roman", serif; fill: #d9c794; }
+      .seal { font: 800 12px Georgia, serif; fill: #2b100c; letter-spacing: 0.12em; }
+      .lane { font: 800 13px Georgia, serif; fill: #c9b27c; letter-spacing: 0.11em; text-transform: uppercase; }
+      .node { font: 800 18px Georgia, "Times New Roman", serif; fill: #fff4d5; letter-spacing: -0.02em; }
+      .sub { font: 600 12px Georgia, "Times New Roman", serif; fill: #f1dfb7; }
+      .small { font: 700 10.5px Georgia, serif; fill: #ead8a8; }
+      .tag { font: 800 11px Georgia, serif; fill: #26180d; }
+      .path { fill: none; stroke-linecap: round; stroke-linejoin: round; filter: url(#inkBleed); }
+      .gold { stroke: #d8b36a; }
+      .jade { stroke: #68d391; }
+      .red { stroke: #f87171; }
+      .violet { stroke: #b7a0ff; }
+      .dash { stroke-dasharray: 8 9; }
+      .wall { fill: #5c4930; stroke: #d8b36a; stroke-width: 1.4; }
+      .paper-panel { fill: #241a10; stroke: #9b7a43; stroke-width: 1.5; }
+      .moss { fill: none; stroke: #5aa065; stroke-width: 2; stroke-linecap: round; opacity: 0.75; }
     </style>
   </defs>
 
-  <rect width="1400" height="920" fill="url(#bg)"/>
-  <rect width="1400" height="920" fill="url(#grid)" opacity="0.72"/>
-  <circle cx="980" cy="170" r="260" fill="url(#glowCyan)"/>
-  <circle cx="650" cy="590" r="320" fill="url(#glowEmerald)"/>
+  <rect width="1400" height="1000" fill="url(#night)"/>
+  <rect width="1400" height="1000" fill="url(#grain)" opacity="0.9"/>
+  <circle cx="1130" cy="112" r="138" fill="url(#moon)"/>
+  <circle cx="760" cy="540" r="430" fill="url(#mist)"/>
+  <circle cx="1180" cy="620" r="330" fill="url(#mist)" opacity="0.55"/>
 
-  <text x="70" y="72" class="title">Adaptative Living Library</text>
-  <text x="70" y="102" class="subtitle">Privacy-safe Hermes Agent knowledge OS: collect signals, curate canon, ground answers, gate side effects.</text>
+  <!-- distant abandoned mountains -->
+  <path d="M0 236 L120 130 L230 246 L350 118 L515 258 L700 104 L910 260 L1080 150 L1230 258 L1400 112 L1400 0 L0 0 Z" fill="#0b1710" opacity="0.78"/>
+  <path d="M0 288 L170 186 L280 306 L420 178 L582 322 L780 158 L960 310 L1120 202 L1290 318 L1400 220 L1400 1000 L0 1000 Z" fill="#102018" opacity="0.42"/>
 
-  <g transform="translate(70 138)">
-    <rect x="0" y="0" width="1260" height="700" rx="24" fill="#020617" opacity="0.72" stroke="#334155" stroke-width="1.2"/>
+  <text x="66" y="72" class="title">Adaptative Living Library</text>
+  <text x="68" y="102" class="subtitle">Baoyu-style isometric map: a silent abandoned Shaolin monastery where raw signals become canon.</text>
+  <g transform="translate(1224 58)">
+    <circle cx="42" cy="42" r="42" fill="#b33a2e" opacity="0.88"/>
+    <text x="21" y="39" class="seal">SAFE</text>
+    <text x="16" y="56" class="seal">CANON</text>
+  </g>
 
-    <!-- lane labels -->
-    <text x="34" y="42" class="lane-title">1 · Setup</text>
-    <text x="324" y="42" class="lane-title">2 · Collection</text>
-    <text x="626" y="42" class="lane-title">3 · Canon</text>
-    <text x="920" y="42" class="lane-title">4 · Runtime</text>
+  <g transform="translate(58 134)">
+    <rect x="0" y="0" width="1284" height="808" rx="30" fill="url(#paper)" stroke="#8e6f3e" stroke-width="2"/>
+    <rect x="18" y="18" width="1248" height="772" rx="24" fill="none" stroke="#483820" stroke-width="1" opacity="0.82"/>
+    <rect x="34" y="590" width="1214" height="154" rx="68" fill="#122015" opacity="0.44"/>
 
-    <!-- arrows behind nodes -->
-    <path class="arrow" stroke="#22d3ee" marker-end="url(#arrowCyan)" d="M250 180 C295 180 298 180 342 180"/>
-    <path class="arrow" stroke="#22d3ee" marker-end="url(#arrowCyan)" d="M250 300 C295 300 298 300 342 300"/>
-    <path class="arrow" stroke="#22d3ee" marker-end="url(#arrowCyan)" d="M510 240 C552 240 560 240 602 240"/>
-    <path class="arrow" stroke="#34d399" marker-end="url(#arrowEmerald)" d="M770 240 C812 240 818 240 862 240"/>
-    <path class="arrow" stroke="#34d399" marker-end="url(#arrowEmerald)" d="M1030 240 C1065 240 1070 240 1106 240"/>
+    <!-- lane labels carved into the wall -->
+    <text x="46" y="54" class="lane">I · Gate / Setup</text>
+    <text x="318" y="54" class="lane">II · Collection Yard</text>
+    <text x="600" y="54" class="lane">III · Archive / Canon</text>
+    <text x="906" y="54" class="lane">IV · Runtime Temple</text>
 
-    <path class="arrow-soft dash" stroke="#fbbf24" marker-end="url(#arrowAmber)" d="M735 132 C700 88 545 86 470 142"/>
-    <path class="arrow-soft dash" stroke="#fb7185" marker-end="url(#arrowRose)" d="M760 356 C812 410 872 426 936 430"/>
-    <path class="arrow-soft dash" stroke="#a78bfa" marker-end="url(#arrowCyan)" d="M952 520 C900 575 820 582 742 410"/>
-    <path class="arrow-soft dash" stroke="#94a3b8" marker-end="url(#arrowCyan)" d="M1130 512 C1112 450 1086 376 1005 310"/>
+    <!-- stone paths behind temples -->
+    <path class="path gold" stroke-width="18" opacity="0.22" d="M210 252 C282 232 318 226 378 210"/>
+    <path class="path gold" stroke-width="18" opacity="0.22" d="M210 444 C286 430 330 410 382 382"/>
+    <path class="path gold" stroke-width="18" opacity="0.22" d="M528 280 C570 300 596 308 632 310"/>
+    <path class="path jade" stroke-width="18" opacity="0.20" d="M748 422 C800 396 842 372 884 346"/>
+    <path class="path jade" stroke-width="18" opacity="0.20" d="M1016 320 C1060 310 1094 304 1128 298"/>
+    <path class="path red" stroke-width="16" opacity="0.18" d="M758 470 C816 516 872 544 928 548"/>
+    <path class="path violet" stroke-width="12" opacity="0.16" d="M918 612 C860 568 820 520 754 452"/>
 
-    <!-- setup column -->
-    <g filter="url(#shadow)">
-      <rect x="34" y="80" width="216" height="104" rx="18" fill="#0f172a" stroke="#f97316" stroke-width="2"/>
-      <rect x="34" y="80" width="216" height="104" rx="18" fill="#fff7ed" opacity="0.06"/>
-      <text x="58" y="118" class="node-title">Operator</text>
-      <text x="58" y="144" class="node-sub">chooses topics, models,</text>
-      <text x="58" y="164" class="node-sub">and safe install mode</text>
-    </g>
-    <g filter="url(#shadow)">
-      <rect x="34" y="220" width="216" height="132" rx="18" fill="#0f172a" stroke="#3b82f6" stroke-width="2"/>
-      <rect x="34" y="220" width="216" height="132" rx="18" fill="#eff6ff" opacity="0.06"/>
-      <text x="58" y="258" class="node-title">Onboarding</text>
-      <text x="58" y="284" class="node-sub">dry-run first</text>
-      <text x="58" y="306" class="node-sub">read-only scan</text>
-      <text x="58" y="328" class="node-sub">bind-ready profiles</text>
-    </g>
+    <path class="path gold" stroke-width="3.4" marker-end="url(#arrowGold)" d="M210 252 C282 232 318 226 378 210"/>
+    <path class="path gold" stroke-width="3.4" marker-end="url(#arrowGold)" d="M210 444 C286 430 330 410 382 382"/>
+    <path class="path gold" stroke-width="3.4" marker-end="url(#arrowGold)" d="M528 280 C570 300 596 308 632 310"/>
+    <path class="path jade" stroke-width="3.4" marker-end="url(#arrowJade)" d="M748 422 C800 396 842 372 884 346"/>
+    <path class="path jade" stroke-width="3.4" marker-end="url(#arrowJade)" d="M1016 320 C1060 310 1094 304 1128 298"/>
+    <path class="path red dash" stroke-width="3" marker-end="url(#arrowRed)" d="M758 470 C816 516 872 544 928 548"/>
+    <path class="path violet dash" stroke-width="2.6" marker-end="url(#arrowJade)" d="M918 612 C860 568 820 520 754 452"/>
+    <path class="path gold dash" stroke-width="2.6" marker-end="url(#arrowGold)" d="M702 228 C666 140 504 136 466 196"/>
 
-    <!-- collection column -->
-    <g filter="url(#shadow)">
-      <rect x="342" y="120" width="168" height="120" rx="18" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
-      <rect x="342" y="120" width="168" height="120" rx="18" fill="#ecfeff" opacity="0.06"/>
-      <text x="378" y="158" class="node-title">Scout</text>
-      <text x="365" y="184" class="node-sub">researches</text>
-      <text x="365" y="206" class="node-sub">source-backed</text>
-      <text x="365" y="228" class="node-sub">signals</text>
-    </g>
-    <g filter="url(#shadow)">
-      <rect x="342" y="270" width="168" height="120" rx="18" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
-      <rect x="342" y="270" width="168" height="120" rx="18" fill="#fef3c7" opacity="0.08"/>
-      <text x="382" y="308" class="node-title">Raw</text>
-      <text x="365" y="334" class="node-sub">inbox + notes</text>
-      <text x="365" y="356" class="node-sub">evidence, not</text>
-      <text x="365" y="378" class="node-sub">canon yet</text>
+    <!-- background scenery: bamboo, ruins, broken statues -->
+    <g opacity="0.55">
+      <path d="M74 612 C74 540 82 482 70 412" stroke="#415c3d" stroke-width="6" fill="none"/>
+      <path d="M92 618 C95 542 108 478 98 394" stroke="#405a3c" stroke-width="5" fill="none"/>
+      <path d="M1192 606 C1190 530 1202 468 1196 390" stroke="#405a3c" stroke-width="6" fill="none"/>
+      <path d="M1216 620 C1220 548 1238 476 1230 398" stroke="#405a3c" stroke-width="5" fill="none"/>
+      <path d="M71 486 L34 458 M79 514 L126 486 M93 452 L128 424 M1199 492 L1162 464 M1212 536 L1252 510 M1224 452 L1260 424" stroke="#7fb174" stroke-width="2"/>
+      <rect x="1124" y="638" width="52" height="30" rx="5" fill="#69573a" opacity="0.72"/>
+      <path d="M1118 638 L1178 638" stroke="#d8b36a" opacity="0.4"/>
+      <circle cx="1149" cy="622" r="14" fill="none" stroke="#9b7a43" stroke-width="4"/>
     </g>
 
-    <!-- canon column -->
-    <g filter="url(#shadow)">
-      <rect x="602" y="170" width="168" height="140" rx="18" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
-      <rect x="602" y="170" width="168" height="140" rx="18" fill="#ecfeff" opacity="0.06"/>
-      <text x="632" y="208" class="node-title">Librarian</text>
-      <text x="625" y="234" class="node-sub">dedupes</text>
-      <text x="625" y="256" class="node-sub">checks evidence</text>
-      <text x="625" y="278" class="node-sub">promotes canon</text>
-    </g>
-    <g filter="url(#shadow)">
-      <rect x="602" y="342" width="168" height="122" rx="18" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
-      <rect x="602" y="342" width="168" height="122" rx="18" fill="#ecfdf5" opacity="0.08"/>
-      <text x="643" y="380" class="node-title">Canon</text>
-      <text x="625" y="406" class="node-sub">decisions · failures</text>
-      <text x="625" y="428" class="node-sub">runbooks · maps</text>
-      <text x="625" y="450" class="node-sub">stable knowledge</text>
+    <!-- reusable temple buildings, handcrafted inline -->
+    <!-- Operator Gate -->
+    <g transform="translate(58 154)" filter="url(#softShadow)">
+      <path d="M8 24 L184 24 L164 58 L28 58 Z" fill="url(#roofRed)" stroke="#d8b36a" stroke-width="1.5"/>
+      <path d="M28 58 H164 V150 H28 Z" class="wall"/>
+      <rect x="47" y="78" width="22" height="72" fill="#2a1c12" stroke="#b8934d"/>
+      <rect x="124" y="78" width="22" height="72" fill="#2a1c12" stroke="#b8934d"/>
+      <path d="M68 150 C78 118 116 118 126 150" fill="#120d09" stroke="#b8934d"/>
+      <text x="48" y="86" class="node">Operator</text>
+      <text x="56" y="110" class="sub">topics · models</text>
+      <text x="62" y="130" class="sub">safe mode</text>
+      <path class="moss" d="M154 62 C150 78 166 92 158 114"/>
+      <path class="moss" d="M34 60 C50 76 36 92 48 112"/>
     </g>
 
-    <!-- runtime column -->
-    <g filter="url(#shadow)">
-      <rect x="862" y="170" width="168" height="140" rx="18" fill="#0f172a" stroke="#8b5cf6" stroke-width="2"/>
-      <rect x="862" y="170" width="168" height="140" rx="18" fill="#f5f3ff" opacity="0.07"/>
-      <text x="900" y="208" class="node-title">Preflight</text>
-      <text x="885" y="234" class="node-sub">rank a few</text>
-      <text x="885" y="256" class="node-sub">relevant pages</text>
-      <text x="885" y="278" class="node-sub">before acting</text>
-    </g>
-    <g filter="url(#shadow)">
-      <rect x="1106" y="170" width="120" height="140" rx="18" fill="#0f172a" stroke="#22c55e" stroke-width="2"/>
-      <rect x="1106" y="170" width="120" height="140" rx="18" fill="#f0fdf4" opacity="0.08"/>
-      <text x="1132" y="208" class="node-title">Answer</text>
-      <text x="1124" y="234" class="node-sub">grounded</text>
-      <text x="1124" y="256" class="node-sub">response</text>
-      <text x="1124" y="278" class="node-sub">or action</text>
+    <!-- Onboarding Courtyard -->
+    <g transform="translate(62 356)" filter="url(#softShadow)">
+      <polygon points="0,34 164,0 212,44 48,82" fill="#49391f" stroke="#d8b36a" stroke-width="1.3"/>
+      <polygon points="48,82 212,44 212,130 48,170" fill="#372719" stroke="#8e6f3e"/>
+      <polygon points="0,34 48,82 48,170 0,122" fill="#241a10" stroke="#8e6f3e"/>
+      <rect x="57" y="82" width="145" height="76" fill="url(#stone)" opacity="0.5"/>
+      <text x="54" y="104" class="node">Onboarding</text>
+      <text x="62" y="128" class="sub">dry-run first</text>
+      <text x="62" y="148" class="sub">read-only scan</text>
+      <path class="moss" d="M168 50 C148 80 178 96 158 126"/>
     </g>
 
-    <!-- lower roles -->
-    <g filter="url(#shadow)">
-      <rect x="936" y="382" width="168" height="126" rx="18" fill="#0f172a" stroke="#fb7185" stroke-width="2"/>
-      <rect x="936" y="382" width="168" height="126" rx="18" fill="#fff1f2" opacity="0.07"/>
-      <text x="970" y="420" class="node-title">Architect</text>
-      <text x="959" y="446" class="node-sub">turns signals</text>
-      <text x="959" y="468" class="node-sub">into proposals</text>
-      <text x="959" y="490" class="node-sub">with risk + proof</text>
-    </g>
-    <g filter="url(#shadow)">
-      <rect x="1106" y="402" width="120" height="86" rx="18" fill="#0f172a" stroke="#f43f5e" stroke-width="2"/>
-      <rect x="1106" y="402" width="120" height="86" rx="18" fill="#fff1f2" opacity="0.10"/>
-      <text x="1125" y="438" class="node-title">Gate</text>
-      <text x="1123" y="464" class="node-sub">approval</text>
-    </g>
-    <g filter="url(#shadow)">
-      <rect x="936" y="548" width="168" height="104" rx="18" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
-      <rect x="936" y="548" width="168" height="104" rx="18" fill="#f5f3ff" opacity="0.07"/>
-      <text x="984" y="586" class="node-title">Oracle</text>
-      <text x="959" y="612" class="node-sub">opt-in tone +</text>
-      <text x="959" y="634" class="node-sub">pattern context</text>
-    </g>
-    <g filter="url(#shadow)">
-      <rect x="602" y="522" width="168" height="104" rx="18" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
-      <rect x="602" y="522" width="168" height="104" rx="18" fill="#f8fafc" opacity="0.05"/>
-      <text x="646" y="560" class="node-title">Ledger</text>
-      <text x="625" y="586" class="node-sub">outputs + logs</text>
-      <text x="625" y="608" class="node-sub">audit trail</text>
+    <!-- Scout Watchtower -->
+    <g transform="translate(356 132)" filter="url(#softShadow)">
+      <path d="M24 24 L160 0 L196 34 L58 64 Z" fill="url(#roofRed)" stroke="#d8b36a" stroke-width="1.4"/>
+      <polygon points="58,64 196,34 196,168 58,198" fill="#3a2a1c" stroke="#b8934d"/>
+      <polygon points="24,24 58,64 58,198 24,152" fill="#24180f" stroke="#8e6f3e"/>
+      <line x1="84" y1="58" x2="84" y2="192" stroke="#b8934d" opacity="0.68"/>
+      <line x1="134" y1="48" x2="134" y2="180" stroke="#b8934d" opacity="0.68"/>
+      <text x="76" y="92" class="node">Scout</text>
+      <text x="74" y="118" class="sub">watches sources</text>
+      <text x="74" y="138" class="sub">brings signals</text>
+      <path d="M26 156 L194 120" stroke="#d8b36a" stroke-width="1" opacity="0.45"/>
+      <path class="moss" d="M170 38 C156 70 184 86 170 116"/>
     </g>
 
-    <!-- connection labels -->
-    <g filter="url(#softGlow)">
-      <rect x="272" y="154" width="52" height="24" rx="12" fill="#22d3ee"/>
-      <text x="286" y="171" class="pill">seed</text>
-      <rect x="520" y="214" width="68" height="24" rx="12" fill="#22d3ee"/>
-      <text x="534" y="231" class="pill">review</text>
-      <rect x="789" y="214" width="58" height="24" rx="12" fill="#34d399"/>
-      <text x="802" y="231" class="pill">lookup</text>
-      <rect x="1042" y="214" width="50" height="24" rx="12" fill="#34d399"/>
-      <text x="1056" y="231" class="pill">use</text>
+    <!-- Raw Courtyard -->
+    <g transform="translate(364 340)" filter="url(#softShadow)">
+      <polygon points="0,44 178,6 226,54 50,96" fill="#665231" stroke="#d8b36a" stroke-width="1.4"/>
+      <polygon points="50,96 226,54 226,154 50,196" fill="#3b2d1c" stroke="#8e6f3e"/>
+      <polygon points="0,44 50,96 50,196 0,142" fill="#21170e" stroke="#8e6f3e"/>
+      <rect x="64" y="98" width="148" height="76" fill="url(#stone)" opacity="0.42"/>
+      <text x="78" y="120" class="node">Raw Yard</text>
+      <text x="78" y="146" class="sub">inbox · notes</text>
+      <text x="78" y="166" class="sub">evidence, not truth</text>
+      <path class="moss" d="M186 60 C160 96 194 110 174 150"/>
+      <path class="moss" d="M46 98 C70 118 42 142 62 166"/>
     </g>
 
-    <!-- footer legend -->
-    <g transform="translate(34 646)">
-      <circle cx="10" cy="10" r="7" fill="#22d3ee"/><text x="26" y="15" class="tiny">Agents collect/curate/propose/adapt</text>
-      <circle cx="274" cy="10" r="7" fill="#10b981"/><text x="290" y="15" class="tiny">Canon is stable knowledge</text>
-      <circle cx="502" cy="10" r="7" fill="#f59e0b"/><text x="518" y="15" class="tiny">Raw is evidence, not truth</text>
-      <circle cx="744" cy="10" r="7" fill="#fb7185"/><text x="760" y="15" class="tiny">Risky side effects require approval</text>
+    <!-- Librarian Archive Hall -->
+    <g transform="translate(604 212)" filter="url(#softShadow)">
+      <path d="M0 50 L110 0 L232 50 L204 82 L28 82 Z" fill="url(#roofRed)" stroke="#f1c66d" stroke-width="1.8"/>
+      <polygon points="28,82 204,82 204,218 28,218" fill="#513923" stroke="#d8b36a" stroke-width="1.4"/>
+      <rect x="46" y="112" width="28" height="106" fill="#26180d" stroke="#b8934d"/>
+      <rect x="102" y="112" width="28" height="106" fill="#26180d" stroke="#b8934d"/>
+      <rect x="158" y="112" width="28" height="106" fill="#26180d" stroke="#b8934d"/>
+      <path d="M74 218 C88 174 144 174 158 218" fill="#130d08" stroke="#b8934d"/>
+      <text x="62" y="118" class="node">Librarian</text>
+      <text x="60" y="146" class="sub">dedupe · verify</text>
+      <text x="60" y="166" class="sub">promote canon</text>
+      <path class="moss" d="M188 86 C164 118 200 142 174 176"/>
+    </g>
+
+    <!-- Canon Vault -->
+    <g transform="translate(608 454)" filter="url(#softShadow)">
+      <path d="M10 34 L116 0 L222 34 L194 64 L38 64 Z" fill="url(#roofJade)" stroke="#b6e3a6" stroke-width="1.6"/>
+      <polygon points="38,64 194,64 194,158 38,158" fill="#203d2c" stroke="#68d391" stroke-width="1.4"/>
+      <rect x="52" y="88" width="128" height="48" rx="12" fill="#13281e" stroke="#93e0a7"/>
+      <text x="82" y="104" class="node">Canon</text>
+      <text x="62" y="130" class="sub">decisions · failures</text>
+      <text x="66" y="148" class="sub">runbooks · maps</text>
+      <path class="moss" d="M38 68 C76 92 36 124 70 150"/>
+    </g>
+
+    <!-- Preflight Moon Bridge -->
+    <g transform="translate(866 238)" filter="url(#softShadow)">
+      <path d="M12 114 C42 34 166 34 198 114" fill="none" stroke="#b7a0ff" stroke-width="16" stroke-linecap="round"/>
+      <path d="M12 114 C42 34 166 34 198 114" fill="none" stroke="#2b2146" stroke-width="10" stroke-linecap="round"/>
+      <path d="M34 110 H176" stroke="#b7a0ff" stroke-width="2" opacity="0.75"/>
+      <text x="48" y="96" class="node">Preflight</text>
+      <text x="42" y="128" class="sub">rank few pages</text>
+      <text x="55" y="148" class="sub">before acting</text>
+    </g>
+
+    <!-- Answer Pavilion -->
+    <g transform="translate(1118 214)" filter="url(#softShadow)">
+      <path d="M0 34 L88 0 L176 34 L150 62 L26 62 Z" fill="url(#roofJade)" stroke="#b6e3a6" stroke-width="1.5"/>
+      <polygon points="26,62 150,62 150,160 26,160" fill="#25422e" stroke="#68d391"/>
+      <text x="54" y="94" class="node">Answer</text>
+      <text x="48" y="122" class="sub">grounded</text>
+      <text x="48" y="142" class="sub">reply/action</text>
+      <path class="moss" d="M146 66 C130 90 156 108 142 136"/>
+    </g>
+
+    <!-- Architect Forge -->
+    <g transform="translate(914 482)" filter="url(#softShadow)">
+      <path d="M0 40 L108 0 L216 40 L186 72 L30 72 Z" fill="url(#roofRed)" stroke="#f1c66d" stroke-width="1.5"/>
+      <polygon points="30,72 186,72 186,176 30,176" fill="#4a211b" stroke="#f87171"/>
+      <circle cx="54" cy="132" r="16" fill="#fb923c" opacity="0.5"/>
+      <text x="60" y="104" class="node">Architect</text>
+      <text x="58" y="132" class="sub">opportunity</text>
+      <text x="58" y="152" class="sub">proposal + proof</text>
+    </g>
+
+    <!-- Approval Gate -->
+    <g transform="translate(1134 492)" filter="url(#softShadow)">
+      <path d="M8 20 L144 20 L124 52 L28 52 Z" fill="url(#roofRed)" stroke="#f1c66d" stroke-width="1.4"/>
+      <rect x="32" y="52" width="22" height="110" fill="#35140f" stroke="#f87171"/>
+      <rect x="98" y="52" width="22" height="110" fill="#35140f" stroke="#f87171"/>
+      <path d="M54 162 C64 132 88 132 98 162" fill="#120908" stroke="#f87171"/>
+      <text x="54" y="84" class="node">Gate</text>
+      <text x="38" y="110" class="sub">approval</text>
+      <text x="38" y="130" class="sub">for risks</text>
+    </g>
+
+    <!-- Oracle Shrine -->
+    <g transform="translate(830 590)" filter="url(#softShadow)">
+      <path d="M30 30 L112 0 L194 30 L170 58 L54 58 Z" fill="url(#roofIndigo)" stroke="#c8b6ff" stroke-width="1.4"/>
+      <polygon points="54,58 170,58 170,144 54,144" fill="#292044" stroke="#b7a0ff"/>
+      <circle cx="112" cy="94" r="22" fill="#b7a0ff" opacity="0.18" stroke="#c8b6ff"/>
+      <text x="80" y="92" class="node">Oracle</text>
+      <text x="72" y="120" class="sub">opt-in tone</text>
+      <text x="72" y="138" class="sub">pattern context</text>
+    </g>
+
+    <!-- Ledger Stones -->
+    <g transform="translate(612 626)" filter="url(#softShadow)">
+      <rect x="0" y="24" width="48" height="98" rx="12" fill="#51483a" stroke="#c7b78f"/>
+      <rect x="62" y="0" width="54" height="122" rx="12" fill="#5d513f" stroke="#c7b78f"/>
+      <rect x="130" y="32" width="48" height="90" rx="12" fill="#4b4438" stroke="#c7b78f"/>
+      <text x="38" y="52" class="node">Ledger</text>
+      <text x="36" y="80" class="sub">outputs</text>
+      <text x="36" y="100" class="sub">logs</text>
+    </g>
+
+    <!-- connection tags -->
+    <g>
+      <rect x="252" y="215" width="58" height="25" rx="12" fill="#d8b36a"/><text x="268" y="232" class="tag">seed</text>
+      <rect x="536" y="278" width="72" height="25" rx="12" fill="#d8b36a"/><text x="550" y="295" class="tag">review</text>
+      <rect x="786" y="386" width="76" height="25" rx="12" fill="#68d391"/><text x="800" y="403" class="tag">lookup</text>
+      <rect x="1040" y="294" width="52" height="25" rx="12" fill="#68d391"/><text x="1056" y="311" class="tag">use</text>
+      <rect x="812" y="526" width="90" height="25" rx="12" fill="#f87171"/><text x="826" y="543" class="tag">proposal</text>
+    </g>
+
+    <!-- bottom legend scroll -->
+    <g transform="translate(48 758)">
+      <rect x="0" y="0" width="1188" height="34" rx="17" fill="#2f2416" stroke="#8e6f3e" opacity="0.96"/>
+      <circle cx="22" cy="17" r="7" fill="#d8b36a"/><text x="38" y="22" class="small">Gold paths: collection → curation</text>
+      <circle cx="298" cy="17" r="7" fill="#68d391"/><text x="314" y="22" class="small">Jade paths: canon → grounded runtime</text>
+      <circle cx="618" cy="17" r="7" fill="#f87171"/><text x="634" y="22" class="small">Red paths: proposal and approval gates</text>
+      <circle cx="936" cy="17" r="7" fill="#b7a0ff"/><text x="952" y="22" class="small">Violet paths: optional Oracle context, never authority</text>
     </g>
   </g>
 </svg>

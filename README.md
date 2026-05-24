@@ -11,7 +11,7 @@ It packages an operating pattern, not anyone's private data:
 
 ## Status
 
-`v0.3.2` visual diagram + onboarding beta. Conservative by default:
+`v0.3.3` Baoyu-inspired visual diagram + onboarding beta. Conservative by default:
 
 - dry-run first;
 - no automatic crons;
@@ -32,7 +32,7 @@ Use it when you want agents to stop relying on scattered chat history and start 
 
 ## How it works
 
-![Adaptative Living Library architecture](docs/adaptative-living-library-architecture.svg)
+![Adaptative Living Library architecture as an abandoned Shaolin monastery map](docs/adaptative-living-library-architecture.svg)
 
 The important contract: **Scout collects**, **Librarian decides canon**, **Architect proposes**, and **Oracle adapts context**. Anything with side effects still waits for explicit operator approval.
 

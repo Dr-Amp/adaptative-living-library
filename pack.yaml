@@ -1,6 +1,6 @@
 name: adaptative-living-library
-version: 0.3.2
-status: visual-diagram-onboarding-beta
+version: 0.3.3
+status: baoyu-shaolin-diagram-onboarding-beta
 summary: Privacy-safe Hermes Agent template for an Adaptative Living Library with Scout, Librarian, Architect, and Oracle profiles.
 hermes_min_version: unknown
 components:

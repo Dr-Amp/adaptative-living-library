@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920" role="img" aria-labelledby="title desc">
+  <title id="title">Adaptative Living Library architecture</title>
+  <desc id="desc">Architecture diagram showing onboarding inputs, raw inbox, Scout, Librarian, canon, preflight, answers, Architect proposals, approval gates, Oracle context, and audit logs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020617"/>
+      <stop offset="0.55" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="glowCyan" cx="50%" cy="50%" r="60%">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowEmerald" cx="50%" cy="50%" r="60%">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.6" opacity="0.65"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000000" flood-opacity="0.38"/>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#22d3ee"/>
+    </marker>
+    <marker id="arrowEmerald" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#34d399"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrowRose" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#fb7185"/>
+    </marker>
+    <style>
+      .title { font: 700 34px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; letter-spacing: -0.04em; }
+      .subtitle { font: 500 16px Inter, ui-sans-serif, system-ui, sans-serif; fill: #94a3b8; }
+      .lane-title { font: 700 14px Inter, ui-sans-serif, system-ui, sans-serif; fill: #cbd5e1; letter-spacing: 0.08em; text-transform: uppercase; }
+      .node-title { font: 800 20px Inter, ui-sans-serif, system-ui, sans-serif; fill: #f8fafc; letter-spacing: -0.02em; }
+      .node-sub { font: 500 13px Inter, ui-sans-serif, system-ui, sans-serif; fill: #cbd5e1; }
+      .tiny { font: 600 11px Inter, ui-sans-serif, system-ui, sans-serif; fill: #94a3b8; }
+      .label { font: 700 12px Inter, ui-sans-serif, system-ui, sans-serif; fill: #e2e8f0; }
+      .pill { font: 700 12px Inter, ui-sans-serif, system-ui, sans-serif; fill: #0f172a; }
+      .arrow { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: 0.92; }
+      .arrow-soft { fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; opacity: 0.72; }
+      .dash { stroke-dasharray: 8 8; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="920" fill="url(#bg)"/>
+  <rect width="1400" height="920" fill="url(#grid)" opacity="0.72"/>
+  <circle cx="980" cy="170" r="260" fill="url(#glowCyan)"/>
+  <circle cx="650" cy="590" r="320" fill="url(#glowEmerald)"/>
+
+  <text x="70" y="72" class="title">Adaptative Living Library</text>
+  <text x="70" y="102" class="subtitle">Privacy-safe Hermes Agent knowledge OS: collect signals, curate canon, ground answers, gate side effects.</text>
+
+  <g transform="translate(70 138)">
+    <rect x="0" y="0" width="1260" height="700" rx="24" fill="#020617" opacity="0.72" stroke="#334155" stroke-width="1.2"/>
+
+    <!-- lane labels -->
+    <text x="34" y="42" class="lane-title">1 · Setup</text>
+    <text x="324" y="42" class="lane-title">2 · Collection</text>
+    <text x="626" y="42" class="lane-title">3 · Canon</text>
+    <text x="920" y="42" class="lane-title">4 · Runtime</text>
+
+    <!-- arrows behind nodes -->
+    <path class="arrow" stroke="#22d3ee" marker-end="url(#arrowCyan)" d="M250 180 C295 180 298 180 342 180"/>
+    <path class="arrow" stroke="#22d3ee" marker-end="url(#arrowCyan)" d="M250 300 C295 300 298 300 342 300"/>
+    <path class="arrow" stroke="#22d3ee" marker-end="url(#arrowCyan)" d="M510 240 C552 240 560 240 602 240"/>
+    <path class="arrow" stroke="#34d399" marker-end="url(#arrowEmerald)" d="M770 240 C812 240 818 240 862 240"/>
+    <path class="arrow" stroke="#34d399" marker-end="url(#arrowEmerald)" d="M1030 240 C1065 240 1070 240 1106 240"/>
+
+    <path class="arrow-soft dash" stroke="#fbbf24" marker-end="url(#arrowAmber)" d="M735 132 C700 88 545 86 470 142"/>
+    <path class="arrow-soft dash" stroke="#fb7185" marker-end="url(#arrowRose)" d="M760 356 C812 410 872 426 936 430"/>
+    <path class="arrow-soft dash" stroke="#a78bfa" marker-end="url(#arrowCyan)" d="M952 520 C900 575 820 582 742 410"/>
+    <path class="arrow-soft dash" stroke="#94a3b8" marker-end="url(#arrowCyan)" d="M1130 512 C1112 450 1086 376 1005 310"/>
+
+    <!-- setup column -->
+    <g filter="url(#shadow)">
+      <rect x="34" y="80" width="216" height="104" rx="18" fill="#0f172a" stroke="#f97316" stroke-width="2"/>
+      <rect x="34" y="80" width="216" height="104" rx="18" fill="#fff7ed" opacity="0.06"/>
+      <text x="58" y="118" class="node-title">Operator</text>
+      <text x="58" y="144" class="node-sub">chooses topics, models,</text>
+      <text x="58" y="164" class="node-sub">and safe install mode</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="34" y="220" width="216" height="132" rx="18" fill="#0f172a" stroke="#3b82f6" stroke-width="2"/>
+      <rect x="34" y="220" width="216" height="132" rx="18" fill="#eff6ff" opacity="0.06"/>
+      <text x="58" y="258" class="node-title">Onboarding</text>
+      <text x="58" y="284" class="node-sub">dry-run first</text>
+      <text x="58" y="306" class="node-sub">read-only scan</text>
+      <text x="58" y="328" class="node-sub">bind-ready profiles</text>
+    </g>
+
+    <!-- collection column -->
+    <g filter="url(#shadow)">
+      <rect x="342" y="120" width="168" height="120" rx="18" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
+      <rect x="342" y="120" width="168" height="120" rx="18" fill="#ecfeff" opacity="0.06"/>
+      <text x="378" y="158" class="node-title">Scout</text>
+      <text x="365" y="184" class="node-sub">researches</text>
+      <text x="365" y="206" class="node-sub">source-backed</text>
+      <text x="365" y="228" class="node-sub">signals</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="342" y="270" width="168" height="120" rx="18" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+      <rect x="342" y="270" width="168" height="120" rx="18" fill="#fef3c7" opacity="0.08"/>
+      <text x="382" y="308" class="node-title">Raw</text>
+      <text x="365" y="334" class="node-sub">inbox + notes</text>
+      <text x="365" y="356" class="node-sub">evidence, not</text>
+      <text x="365" y="378" class="node-sub">canon yet</text>
+    </g>
+
+    <!-- canon column -->
+    <g filter="url(#shadow)">
+      <rect x="602" y="170" width="168" height="140" rx="18" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
+      <rect x="602" y="170" width="168" height="140" rx="18" fill="#ecfeff" opacity="0.06"/>
+      <text x="632" y="208" class="node-title">Librarian</text>
+      <text x="625" y="234" class="node-sub">dedupes</text>
+      <text x="625" y="256" class="node-sub">checks evidence</text>
+      <text x="625" y="278" class="node-sub">promotes canon</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="602" y="342" width="168" height="122" rx="18" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+      <rect x="602" y="342" width="168" height="122" rx="18" fill="#ecfdf5" opacity="0.08"/>
+      <text x="643" y="380" class="node-title">Canon</text>
+      <text x="625" y="406" class="node-sub">decisions · failures</text>
+      <text x="625" y="428" class="node-sub">runbooks · maps</text>
+      <text x="625" y="450" class="node-sub">stable knowledge</text>
+    </g>
+
+    <!-- runtime column -->
+    <g filter="url(#shadow)">
+      <rect x="862" y="170" width="168" height="140" rx="18" fill="#0f172a" stroke="#8b5cf6" stroke-width="2"/>
+      <rect x="862" y="170" width="168" height="140" rx="18" fill="#f5f3ff" opacity="0.07"/>
+      <text x="900" y="208" class="node-title">Preflight</text>
+      <text x="885" y="234" class="node-sub">rank a few</text>
+      <text x="885" y="256" class="node-sub">relevant pages</text>
+      <text x="885" y="278" class="node-sub">before acting</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="1106" y="170" width="120" height="140" rx="18" fill="#0f172a" stroke="#22c55e" stroke-width="2"/>
+      <rect x="1106" y="170" width="120" height="140" rx="18" fill="#f0fdf4" opacity="0.08"/>
+      <text x="1132" y="208" class="node-title">Answer</text>
+      <text x="1124" y="234" class="node-sub">grounded</text>
+      <text x="1124" y="256" class="node-sub">response</text>
+      <text x="1124" y="278" class="node-sub">or action</text>
+    </g>
+
+    <!-- lower roles -->
+    <g filter="url(#shadow)">
+      <rect x="936" y="382" width="168" height="126" rx="18" fill="#0f172a" stroke="#fb7185" stroke-width="2"/>
+      <rect x="936" y="382" width="168" height="126" rx="18" fill="#fff1f2" opacity="0.07"/>
+      <text x="970" y="420" class="node-title">Architect</text>
+      <text x="959" y="446" class="node-sub">turns signals</text>
+      <text x="959" y="468" class="node-sub">into proposals</text>
+      <text x="959" y="490" class="node-sub">with risk + proof</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="1106" y="402" width="120" height="86" rx="18" fill="#0f172a" stroke="#f43f5e" stroke-width="2"/>
+      <rect x="1106" y="402" width="120" height="86" rx="18" fill="#fff1f2" opacity="0.10"/>
+      <text x="1125" y="438" class="node-title">Gate</text>
+      <text x="1123" y="464" class="node-sub">approval</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="936" y="548" width="168" height="104" rx="18" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+      <rect x="936" y="548" width="168" height="104" rx="18" fill="#f5f3ff" opacity="0.07"/>
+      <text x="984" y="586" class="node-title">Oracle</text>
+      <text x="959" y="612" class="node-sub">opt-in tone +</text>
+      <text x="959" y="634" class="node-sub">pattern context</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="602" y="522" width="168" height="104" rx="18" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+      <rect x="602" y="522" width="168" height="104" rx="18" fill="#f8fafc" opacity="0.05"/>
+      <text x="646" y="560" class="node-title">Ledger</text>
+      <text x="625" y="586" class="node-sub">outputs + logs</text>
+      <text x="625" y="608" class="node-sub">audit trail</text>
+    </g>
+
+    <!-- connection labels -->
+    <g filter="url(#softGlow)">
+      <rect x="272" y="154" width="52" height="24" rx="12" fill="#22d3ee"/>
+      <text x="286" y="171" class="pill">seed</text>
+      <rect x="520" y="214" width="68" height="24" rx="12" fill="#22d3ee"/>
+      <text x="534" y="231" class="pill">review</text>
+      <rect x="789" y="214" width="58" height="24" rx="12" fill="#34d399"/>
+      <text x="802" y="231" class="pill">lookup</text>
+      <rect x="1042" y="214" width="50" height="24" rx="12" fill="#34d399"/>
+      <text x="1056" y="231" class="pill">use</text>
+    </g>
+
+    <!-- footer legend -->
+    <g transform="translate(34 646)">
+      <circle cx="10" cy="10" r="7" fill="#22d3ee"/><text x="26" y="15" class="tiny">Agents collect/curate/propose/adapt</text>
+      <circle cx="274" cy="10" r="7" fill="#10b981"/><text x="290" y="15" class="tiny">Canon is stable knowledge</text>
+      <circle cx="502" cy="10" r="7" fill="#f59e0b"/><text x="518" y="15" class="tiny">Raw is evidence, not truth</text>
+      <circle cx="744" cy="10" r="7" fill="#fb7185"/><text x="760" y="15" class="tiny">Risky side effects require approval</text>
+    </g>
+  </g>
+</svg>

@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.2 - 2026-05-24
+
+### Changed
+
+- Replaced README/docs Mermaid-only diagram with a static SVG architecture diagram so GitHub/mobile previews show the visual reliably.
+
 ## v0.3.1 - 2026-05-24
 
 ### Added

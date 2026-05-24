@@ -25,7 +25,10 @@ def test_required_paths_exist():
         'library-template/SCHEMA.md',
         'library-template/scripts/onboard.py',
         'library-template/scripts/sanitize_check.py',
-        'profiles/adaptative-librero/config.yaml',
+        'profiles/librarian/config.yaml',
+        'profiles/scout/config.yaml',
+        'profiles/architect/config.yaml',
+        'profiles/oracle/config.yaml',
     ]
     for rel in required:
         assert (ROOT / rel).exists(), rel
@@ -53,7 +56,8 @@ def test_installed_template_contains_runtime_scripts(tmp_path):
         assert (installed / rel).exists(), rel
     assert not list(installed.rglob('__pycache__'))
     assert not list(installed.rglob('*.pyc'))
-    assert (target / 'skills' / 'community' / 'adaptative-living-library' / 'adaptative-librero' / 'SKILL.md').exists()
+    for role in ['librarian', 'scout', 'architect', 'oracle']:
+        assert (target / 'skills' / 'community' / 'adaptative-living-library' / role / 'SKILL.md').exists()
 
 
 def test_onboarding_generates_bind_ready_profiles_and_raw(tmp_path):
@@ -69,7 +73,9 @@ def test_onboarding_generates_bind_ready_profiles_and_raw(tmp_path):
         sys.executable, str(ROOT/'scripts/onboard.py'), '--apply', '--target', str(target),
         '--library-name', 'adaptative-living-library-test', '--operator-name', 'Example Operator',
         '--provider', 'openrouter', '--main-model', 'anthropic/claude-sonnet-4',
-        '--scout-model', 'openai/gpt-4.1-mini', '--topic', 'AI agents', '--topic', 'creative video workflows',
+        '--librarian-model', 'anthropic/claude-sonnet-4', '--scout-model', 'openai/gpt-4.1-mini',
+        '--architect-model', 'anthropic/claude-sonnet-4', '--oracle-model', 'openai/gpt-4.1-mini',
+        '--topic', 'AI agents', '--topic', 'creative video workflows',
         '--session-source', str(ROOT/'examples/sample-session.txt'),
         '--memory-source', str(ROOT/'examples/sample-memory.md'),
         '--obsidian-vault', str(vault), '--non-interactive'
@@ -79,7 +85,9 @@ def test_onboarding_generates_bind_ready_profiles_and_raw(tmp_path):
     assert (library / 'onboarding' / 'adaptative-config.yaml').exists()
     assert 'AI agents' in (library / 'onboarding' / 'adaptative-config.yaml').read_text()
     assert list((library / 'raw' / 'onboarding').glob('initial-discovery-*.md'))
-    scout_profile = target / 'profiles' / 'adaptative-scout' / 'config.yaml'
+    scout_profile = target / 'profiles' / 'scout' / 'config.yaml'
     assert scout_profile.exists()
     assert 'openai/gpt-4.1-mini' in scout_profile.read_text()
+    for role in ['librarian', 'architect', 'oracle']:
+        assert (target / 'profiles' / role / 'config.yaml').exists()
     assert (vault / 'Adaptative Living Library').exists() or (vault / 'ADAPTATIVE_LIVING_LIBRARY_LINK.md').exists()

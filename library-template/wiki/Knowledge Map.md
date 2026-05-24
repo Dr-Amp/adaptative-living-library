@@ -10,19 +10,19 @@ confidence: high
 # Knowledge Map
 
 ```text
-Scout -> Inbox/Raw -> Librero -> Canon -> Preflight -> Better answers
+Scout -> Inbox/Raw -> Librarian -> Canon -> Preflight -> Better answers
                          |
                          v
-                Autonomous proposals
+                Architect proposals
                          |
                          v
                   Human approval gate
 
-Relic observes patterns and adapts tone/context only when useful.
+Oracle observes patterns and adapts tone/context only when useful.
 ```
 
 Related:
 
-- [[Concepts/scout-librero-autonomous-relic-architecture]]
+- [[Concepts/scout-librarian-architect-oracle-architecture]]
 - [[Runbooks/library-preflight-routing]]
-- [[Runbooks/librero-curation-loop]]
+- [[Runbooks/librarian-curation-loop]]

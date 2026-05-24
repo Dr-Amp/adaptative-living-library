@@ -4,14 +4,14 @@ A privacy-safe starter pack for building an **Adaptative Living Library** around
 
 It packages an operating pattern, not anyone's private data:
 
-- **Adaptative Scout**: researches topics and gathers signals into raw/inbox lanes.
-- **Adaptative Librero**: curates raw notes into stable decisions, failures, runbooks, concepts, and maps.
-- **Adaptative Autonomous**: turns useful signals into gated improvement proposals.
-- **Adaptative Relic**: keeps opt-in longitudinal context for tone and patterns, without diagnosis or hidden memory writes.
+- **Scout**: researches topics and gathers signals into raw/inbox lanes.
+- **Librarian**: curates raw notes into stable decisions, failures, runbooks, concepts, and maps.
+- **Architect**: turns useful signals into gated improvement proposals.
+- **Oracle**: keeps opt-in longitudinal context for tone and patterns, without diagnosis or hidden memory writes.
 
 ## Status
 
-`v0.2.0` onboarding beta. Conservative by default:
+`v0.3.0` naming + onboarding beta. Conservative by default:
 
 - dry-run first;
 - no automatic crons;
@@ -25,7 +25,7 @@ It packages an operating pattern, not anyone's private data:
 A template and installer for a Hermes knowledge operating system:
 
 ```text
-sessions/memory/topics -> raw onboarding scan -> Scout missions -> Librero canon -> preflight before answers -> Autonomous proposals when useful
+sessions/memory/topics -> raw onboarding scan -> Scout missions -> Librarian canon -> preflight before answers -> Architect proposals when useful
 ```
 
 Use it when you want agents to stop relying on scattered chat history and start checking a curated local wiki before answering or acting.
@@ -34,10 +34,10 @@ Use it when you want agents to stop relying on scattered chat history and start 
 
 The pack creates these profiles and skills:
 
-- `adaptative-scout` — **Adaptative Scout**
-- `adaptative-librero` — **Adaptative Librero**
-- `adaptative-autonomous` — **Adaptative Autonomous**
-- `adaptative-relic` — **Adaptative Relic**
+- `scout` — **Scout**
+- `librarian` — **Librarian**
+- `architect` — **Architect**
+- `oracle` — **Oracle**
 
 They are installed as profiles so you can later bind them to Telegram topics, Discord channels, cron jobs, or local CLI usage.
 
@@ -79,9 +79,9 @@ python3 scripts/onboard.py \
   --provider openrouter \
   --main-model "anthropic/claude-sonnet-4" \
   --scout-model "openai/gpt-4.1-mini" \
-  --librero-model "anthropic/claude-sonnet-4" \
-  --autonomous-model "anthropic/claude-sonnet-4" \
-  --relic-model "openai/gpt-4.1-mini" \
+  --librarian-model "anthropic/claude-sonnet-4" \
+  --architect-model "anthropic/claude-sonnet-4" \
+  --oracle-model "openai/gpt-4.1-mini" \
   --topic "AI agents" \
   --topic "creative video workflows" \
   --scan-existing
@@ -99,12 +99,12 @@ By default this creates a symlink named `Adaptative Living Library` inside the v
 
 `scripts/onboard.py` is local and dry-run by default. With `--apply` it:
 
-1. records chosen models for Scout, Librero, Autonomous, and Relic;
+1. records chosen models for Scout, Librarian, Architect, and Oracle;
 2. records explicit topics of interest for Scout;
 3. scans local session/memory paths read-only when `--scan-existing` is enabled;
 4. writes an initial raw onboarding note under `raw/onboarding/`;
 5. writes `onboarding/adaptative-config.yaml` and `onboarding/profile-bindings.yaml`;
-6. creates/updates bind-ready profile configs under `~/.hermes/profiles/adaptative-*`;
+6. creates/updates bind-ready profile configs under `~/.hermes/profiles/{librarian,scout,architect,oracle}`;
 7. optionally links an Obsidian vault.
 
 It does **not** create crons, restart the gateway, edit global Hermes config, call LLMs, upload data, or write active memory stores.
@@ -114,10 +114,10 @@ It does **not** create crons, restart the gateway, edit global Hermes config, ca
 ```text
 ~/.hermes/
 ├── libraries/adaptative-living-library/        # Markdown Living Library
-├── profiles/adaptative-librero/                # profile ready to bind
-├── profiles/adaptative-scout/
-├── profiles/adaptative-autonomous/
-├── profiles/adaptative-relic/
+├── profiles/librarian/                # profile ready to bind
+├── profiles/scout/
+├── profiles/architect/
+├── profiles/oracle/
 └── skills/community/adaptative-living-library/ # only if --install-skills is passed
 ```
 

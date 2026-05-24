@@ -1,18 +1,18 @@
 ---
-title: Librero Curation Loop
+title: Architect Proposal Gate
 type: runbook
 status: active
 area: ops
-subarea: librero-curation-loop
+subarea: architect-proposal-gate
 tags: [runbook, living-library, hermes]
 confidence: high
-related: ['[[Concepts/scout-librero-autonomous-relic-architecture]]', '[[wiki/Index]]']
+related: ['[[Concepts/scout-librarian-architect-oracle-architecture]]', '[[wiki/Index]]']
 ---
-# Librero Curation Loop
+# Architect Proposal Gate
 
 ## Purpose
 
-Review inbox/raw material, classify it, promote only durable knowledge, update indexes/logs, run lints, and avoid creating canon for noise.
+Architect proposes improvements only after duplicate checks and risk classification. Risky actions require explicit approval.
 
 ## Procedure
 
@@ -31,4 +31,4 @@ Review inbox/raw material, classify it, promote only durable knowledge, update i
 - active memory writes
 - external publishing
 
-Related: [[Concepts/scout-librero-autonomous-relic-architecture]]
+Related: [[Concepts/scout-librarian-architect-oracle-architecture]]

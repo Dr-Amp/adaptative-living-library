@@ -1,20 +1,20 @@
 name: adaptative-living-library
-version: 0.2.0
-status: onboarding-beta
-summary: Privacy-safe Hermes Agent template for an Adaptative Living Library with Scout, Librero, Autonomous, and Relic profiles.
+version: 0.3.0
+status: naming-onboarding-beta
+summary: Privacy-safe Hermes Agent template for an Adaptative Living Library with Scout, Librarian, Architect, and Oracle profiles.
 hermes_min_version: unknown
 components:
   library_template: library-template
   profiles:
-    - adaptative-librero
-    - adaptative-scout
-    - adaptative-autonomous
-    - adaptative-relic
+    - librarian
+    - scout
+    - architect
+    - oracle
   skills:
-    - adaptative-librero
-    - adaptative-scout
-    - adaptative-autonomous
-    - adaptative-relic
+    - librarian
+    - scout
+    - architect
+    - oracle
   scripts:
     - scripts/install_pack.py
     - scripts/onboard.py
@@ -30,10 +30,10 @@ safety_defaults:
   write_active_memory: false
   publish_external: false
 agent_names:
-  scout: Adaptative Scout
-  librero: Adaptative Librero
-  autonomous: Adaptative Autonomous
-  relic: Adaptative Relic
+  scout: Scout
+  librarian: Librarian
+  architect: Architect
+  oracle: Oracle
 placeholders:
   HERMES_HOME: __HERMES_HOME__
   LIBRARY_NAME: __LIBRARY_NAME__

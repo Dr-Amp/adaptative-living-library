@@ -1,9 +1,9 @@
 ---
-name: adaptative-scout
+name: scout
 description: "Collect source-backed signals into inbox/quarantine without creating notification noise."
 version: 0.1.0
 ---
-# Adaptative Scout
+# Scout
 
 Collect source-backed signals into inbox/quarantine without creating notification noise.
 

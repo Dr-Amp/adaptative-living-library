@@ -1,12 +1,12 @@
 ---
-title: Sample Autonomous Recommendation
+title: Sample Architect Recommendation
 type: output
 status: draft
-area: autonomous-drive
+area: architect
 tags: [sample, recommendation]
 confidence: low
 ---
-# Sample Autonomous Recommendation
+# Sample Architect Recommendation
 
 ## Proposal
 
@@ -14,7 +14,7 @@ Add a duplicate check before creating new improvement proposals.
 
 ## Evidence
 
-- [[Failures/duplicate-autonomous-proposals]]
+- [[Failures/duplicate-architect-proposals]]
 
 ## Approval needed
 

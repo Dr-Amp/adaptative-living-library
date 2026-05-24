@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.3.0 - 2026-05-24
+
+Standardized the four public agent names.
+
+### Changed
+
+- Agent/profile display names are now **Librarian**, **Scout**, **Architect**, and **Oracle**.
+- Profile and skill slugs are now `librarian`, `scout`, `architect`, and `oracle`.
+- Onboarding model flags are now `--librarian-model`, `--scout-model`, `--architect-model`, and `--oracle-model`.
+- Template pages, runbooks, examples, indexes, and architecture links were renamed to the same vocabulary.
+
 ## v0.2.0 - 2026-05-24
 
 Renamed the project to **Adaptative Living Library** and added first-run onboarding.
@@ -7,10 +18,10 @@ Renamed the project to **Adaptative Living Library** and added first-run onboard
 ### Added
 
 - `scripts/onboard.py` for dry-run-first local onboarding.
-- Model selection for Adaptative Scout, Librero, Autonomous, and Relic profiles.
+- Model selection for Scout, Librarian, Architect, and Oracle profiles.
 - Scout topic seeding through repeated `--topic` flags.
 - Read-only session/memory scan into `raw/onboarding/` as source material.
-- Bind-ready profile generation under `profiles/adaptative-*`.
+- Bind-ready profile generation under the four role profile directories.
 - Obsidian vault linking via `--obsidian-vault`.
 - `docs/onboarding.md`.
 - Release checks now include onboarding smoke tests.
@@ -18,7 +29,7 @@ Renamed the project to **Adaptative Living Library** and added first-run onboard
 ### Changed
 
 - Product name: Hermes Living Ops Pack → Adaptative Living Library.
-- Agent/profile names: Adaptative Scout, Adaptative Librero, Adaptative Autonomous, Adaptative Relic.
+- Agent/profile names: Scout, Librarian, Architect, Oracle.
 - Default library name: `adaptative-living-library`.
 
 ### Safety
@@ -33,7 +44,7 @@ Initial public-safe template release.
 ### Added
 
 - Living Library template with maps, runbooks, decisions, failures, outputs, questions, and memory notes.
-- Generic profiles for Librarian, Scout, Autonomous Drive, and Relic Lite roles.
+- Generic profiles for Librarian, Scout, Architect, and Oracle roles.
 - Generic skills for the same four roles.
 - Safe installer with dry-run default and `--apply` opt-in.
 - Sanitizer, library lint, cheap preflight, and release-check scripts.

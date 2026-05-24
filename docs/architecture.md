@@ -5,20 +5,20 @@ Adaptative Living Library uses a simple promotion pipeline:
 ```text
 explicit interests + session/memory scan
   -> raw onboarding candidates
-  -> Adaptative Scout missions
-  -> Adaptative Librero review
+  -> Scout missions
+  -> Librarian review
   -> stable canon page
   -> cheap preflight lookup
   -> grounded agent answer/action
-  -> Adaptative Autonomous proposal when useful now
+  -> Architect proposal when useful now
 ```
 
 ## Roles
 
-- **Adaptative Scout** collects signals but does not decide canon.
-- **Adaptative Librero** owns curation, de-duplication, contradictions, and promotion.
-- **Adaptative Autonomous** proposes changes but does not execute risky side effects by default.
-- **Adaptative Relic** tracks opt-in longitudinal patterns as context, not as authority.
+- **Scout** collects signals but does not decide canon.
+- **Librarian** owns curation, de-duplication, contradictions, and promotion.
+- **Architect** proposes changes but does not execute risky side effects by default.
+- **Oracle** tracks opt-in longitudinal patterns as context, not as authority.
 
 ## Knowledge layers
 

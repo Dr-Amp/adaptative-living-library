@@ -1,18 +1,18 @@
 ---
-title: Autonomous Proposal Gate
+title: Librarian Curation Loop
 type: runbook
 status: active
 area: ops
-subarea: autonomous-proposal-gate
+subarea: librarian-curation-loop
 tags: [runbook, living-library, hermes]
 confidence: high
-related: ['[[Concepts/scout-librero-autonomous-relic-architecture]]', '[[wiki/Index]]']
+related: ['[[Concepts/scout-librarian-architect-oracle-architecture]]', '[[wiki/Index]]']
 ---
-# Autonomous Proposal Gate
+# Librarian Curation Loop
 
 ## Purpose
 
-Autonomous Drive proposes improvements only after duplicate checks and risk classification. Risky actions require explicit approval.
+Review inbox/raw material, classify it, promote only durable knowledge, update indexes/logs, run lints, and avoid creating canon for noise.
 
 ## Procedure
 
@@ -31,4 +31,4 @@ Autonomous Drive proposes improvements only after duplicate checks and risk clas
 - active memory writes
 - external publishing
 
-Related: [[Concepts/scout-librero-autonomous-relic-architecture]]
+Related: [[Concepts/scout-librarian-architect-oracle-architecture]]

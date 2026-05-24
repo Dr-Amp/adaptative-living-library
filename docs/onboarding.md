@@ -14,10 +14,10 @@ python3 scripts/onboard.py --apply --target ~/.hermes --library-name adaptative-
 
 Onboarding asks for or accepts model strings for:
 
-- `adaptative-librero`
-- `adaptative-scout`
-- `adaptative-autonomous`
-- `adaptative-relic`
+- `librarian`
+- `scout`
+- `architect`
+- `oracle`
 
 It writes those into copied profile configs. It does not edit global `config.yaml` and does not restart Hermes.
 
@@ -47,7 +47,7 @@ python3 scripts/onboard.py --apply \
   --memory-source ~/.hermes/libraries
 ```
 
-The scan is deterministic/read-only. It extracts topic candidates and small excerpts into raw onboarding notes. Treat this as source material: Librero should curate it later before it becomes canon.
+The scan is deterministic/read-only. It extracts topic candidates and small excerpts into raw onboarding notes. Treat this as source material: Librarian should curate it later before it becomes canon.
 
 ## Obsidian vault link
 

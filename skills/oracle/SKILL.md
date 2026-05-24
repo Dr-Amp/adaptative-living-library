@@ -1,9 +1,9 @@
 ---
-name: adaptative-relic
+name: oracle
 description: "Use opt-in longitudinal context to adapt tone without exposing or overclaiming patterns."
 version: 0.1.0
 ---
-# Adaptative Relic
+# Oracle
 
 Use opt-in longitudinal context to adapt tone without exposing or overclaiming patterns.
 

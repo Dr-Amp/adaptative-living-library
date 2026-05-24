@@ -12,7 +12,7 @@ confidence: high
 If you are a human, start with:
 
 - [[wiki/Mapas/00 - Human Start]]
-- [[wiki/Mapas/Scout Librero Autonomous Relic]]
+- [[wiki/Mapas/Scout Librarian Architect Oracle]]
 - [[wiki/Indexes/Index by Area and Subarea]]
 - [[wiki/Questions/Open Questions and Gaps]]
 

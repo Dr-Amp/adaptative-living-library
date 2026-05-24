@@ -15,4 +15,4 @@ Use this as a lightweight review queue.
 - Medium confidence pages need periodic review.
 - Low confidence pages should not harden into canon without evidence.
 
-Related: [[Runbooks/librero-curation-loop]], [[Questions/Open Questions and Gaps]]
+Related: [[Runbooks/librarian-curation-loop]], [[Questions/Open Questions and Gaps]]

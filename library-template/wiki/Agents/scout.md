@@ -1,14 +1,14 @@
 ---
-title: Adaptative Scout
+title: Scout
 type: agent
 status: active
 area: ops
 subarea: agents
 tags: [agent, hermes, living-library]
 confidence: high
-related: ['[[Concepts/scout-librero-autonomous-relic-architecture]]', '[[Runbooks/library-preflight-routing]]']
+related: ['[[Concepts/scout-librarian-architect-oracle-architecture]]', '[[Runbooks/library-preflight-routing]]']
 ---
-# Adaptative Scout
+# Scout
 
 Finds signals from configured sources and writes them to inbox/quarantine lanes with source, date, confidence, and why it might matter.
 
@@ -19,4 +19,4 @@ Finds signals from configured sources and writes them to inbox/quarantine lanes 
 - Ask before side effects.
 - Keep user-facing output compact.
 
-Related: [[Concepts/scout-librero-autonomous-relic-architecture]], [[Runbooks/librero-curation-loop]]
+Related: [[Concepts/scout-librarian-architect-oracle-architecture]], [[Runbooks/librarian-curation-loop]]

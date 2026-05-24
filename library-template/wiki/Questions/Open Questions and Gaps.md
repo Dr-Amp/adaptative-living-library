@@ -6,7 +6,7 @@ area: library
 subarea: gaps
 tags: [questions, gaps]
 confidence: medium
-related: ['[[Runbooks/librero-curation-loop]]', '[[Concepts/scout-librero-autonomous-relic-architecture]]']
+related: ['[[Runbooks/librarian-curation-loop]]', '[[Concepts/scout-librarian-architect-oracle-architecture]]']
 ---
 # Open Questions and Gaps
 

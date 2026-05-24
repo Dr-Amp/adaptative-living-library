@@ -1,9 +1,9 @@
 ---
-name: adaptative-autonomous
+name: architect
 description: "Propose operational improvements with duplicate checks and approval gates."
 version: 0.1.0
 ---
-# Adaptative Autonomous
+# Architect
 
 Propose operational improvements with duplicate checks and approval gates.
 

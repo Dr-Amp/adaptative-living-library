@@ -1,9 +1,9 @@
 ---
-name: adaptative-librero
+name: librarian
 description: "Curate Living Ops Library knowledge with evidence, low noise, and safe promotion gates."
 version: 0.1.0
 ---
-# Adaptative Librero
+# Librarian
 
 Curate Living Ops Library knowledge with evidence, low noise, and safe promotion gates.
 

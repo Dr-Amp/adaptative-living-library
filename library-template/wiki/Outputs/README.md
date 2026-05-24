@@ -7,7 +7,7 @@ subarea: ledger
 tags: [output, ledger]
 confidence: high
 canonical_status: ledger
-related: ['[[Runbooks/librero-curation-loop]]', '[[Indexes/Index by Status and Confidence]]']
+related: ['[[Runbooks/librarian-curation-loop]]', '[[Indexes/Index by Status and Confidence]]']
 ---
 # Outputs Ledger
 

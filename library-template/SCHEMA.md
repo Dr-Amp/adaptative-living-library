@@ -11,7 +11,7 @@ confidence: high
 
 ## Domain
 
-Operational knowledge for a Hermes-based agent team: routing, memory, scouting, curation, autonomous proposals, longitudinal context, sync, and safety gates.
+Operational knowledge for a Hermes-based agent team: routing, memory, scouting, curation, architect proposals, longitudinal context, sync, and safety gates.
 
 ## Canon layers
 
@@ -26,7 +26,7 @@ Operational knowledge for a Hermes-based agent team: routing, memory, scouting, 
 title: Human title
 type: area | agent | concept | decision | failure | runbook | memory | index | map | output | question
 status: active | draft | archived
-area: ops | scout | autonomous-drive | relic | memory | sync | library
+area: ops | scout | architect | oracle | memory | sync | library
 tags: [living-library]
 confidence: high | medium | low
 ```

@@ -1,18 +1,18 @@
 ---
-title: Relic Pattern Notes
+title: Oracle Pattern Notes
 type: runbook
 status: active
 area: ops
-subarea: relic-pattern-notes
+subarea: oracle-pattern-notes
 tags: [runbook, living-library, hermes]
 confidence: high
-related: ['[[Concepts/scout-librero-autonomous-relic-architecture]]', '[[wiki/Index]]']
+related: ['[[Concepts/scout-librarian-architect-oracle-architecture]]', '[[wiki/Index]]']
 ---
-# Relic Pattern Notes
+# Oracle Pattern Notes
 
 ## Purpose
 
-Relic stores opt-in longitudinal observations as hypotheses with confidence. It adapts tone/context but does not present portraits unless asked.
+Oracle stores opt-in longitudinal observations as hypotheses with confidence. It adapts tone/context but does not present portraits unless asked.
 
 ## Procedure
 
@@ -31,4 +31,4 @@ Relic stores opt-in longitudinal observations as hypotheses with confidence. It 
 - active memory writes
 - external publishing
 
-Related: [[Concepts/scout-librero-autonomous-relic-architecture]]
+Related: [[Concepts/scout-librarian-architect-oracle-architecture]]

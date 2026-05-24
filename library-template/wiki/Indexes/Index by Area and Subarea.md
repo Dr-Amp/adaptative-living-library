@@ -20,7 +20,7 @@ confidence: high
 
 ## ops / curation
 
-- [[Runbooks/librero-curation-loop]]
+- [[Runbooks/librarian-curation-loop]]
 
 ## sync / obsidian
 

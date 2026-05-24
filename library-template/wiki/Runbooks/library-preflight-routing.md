@@ -6,7 +6,7 @@ area: ops
 subarea: library-preflight-routing
 tags: [runbook, living-library, hermes]
 confidence: high
-related: ['[[Concepts/scout-librero-autonomous-relic-architecture]]', '[[wiki/Index]]']
+related: ['[[Concepts/scout-librarian-architect-oracle-architecture]]', '[[wiki/Index]]']
 ---
 # Library Preflight Routing
 
@@ -31,4 +31,4 @@ Before answering non-trivial questions, run a cheap deterministic search over me
 - active memory writes
 - external publishing
 
-Related: [[Concepts/scout-librero-autonomous-relic-architecture]]
+Related: [[Concepts/scout-librarian-architect-oracle-architecture]]

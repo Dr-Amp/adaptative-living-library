@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.4 - 2026-05-24
+
+### Changed
+
+- Replaced the previous decorative Shaolin SVG with a minimal PNG operating diagram that explains the answer, curation, improvement, and review/memory lanes and includes Architect explicitly.
+
 ## v0.3.3 - 2026-05-24
 
 ### Changed

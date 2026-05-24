@@ -15,9 +15,9 @@ explicit interests + session/memory scan
 
 ## System diagram
 
-![Adaptative Living Library architecture as an abandoned Shaolin monastery map](adaptative-living-library-architecture.svg)
+![Adaptative Living Library minimal operating diagram with Scout, Librarian, Architect, Oracle, Canon, and Ledger lanes](adaptative-living-library-architecture.png)
 
-The visual language uses a Baoyu-style infographic treatment: isometric map layout, aged parchment tones, abandoned Shaolin monastery motifs, and explicit path colors for collection, canon, proposals, and optional context.
+The visual language uses a minimal cassette/occult-industrial diagram treatment: dark Shaolin-tape styling, clear operating lanes for answer, curation, improvement, and review/memory, and explicit roles for Scout, Librarian, Architect, Oracle, Canon, Approval Gate, and Ledger.
 
 ### Reading the diagram
 

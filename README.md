@@ -11,7 +11,7 @@ It packages an operating pattern, not anyone's private data:
 
 ## Status
 
-`v0.3.0` naming + onboarding beta. Conservative by default:
+`v0.3.1` diagram + onboarding beta. Conservative by default:
 
 - dry-run first;
 - no automatic crons;
@@ -29,6 +29,60 @@ sessions/memory/topics -> raw onboarding scan -> Scout missions -> Librarian can
 ```
 
 Use it when you want agents to stop relying on scattered chat history and start checking a curated local wiki before answering or acting.
+
+## How it works
+
+```mermaid
+flowchart LR
+  Human([Operator]):::human
+  Topics[Topics of interest]:::input
+  Models[Model choices<br/>provider + per-role models]:::input
+  Existing[Existing sessions / memory<br/>read-only scan]:::input
+
+  Raw[(Raw + Inbox<br/>untrusted evidence)]:::raw
+  Scout[Scout<br/>finds source-backed signals]:::agent
+  Librarian[Librarian<br/>curates, dedupes, promotes]:::agent
+  Canon[(Living Library Canon<br/>Decisions · Failures · Runbooks · Concepts · Maps)]:::canon
+  Preflight[Cheap Preflight<br/>rank relevant canon before answering]:::process
+
+  Architect[Architect<br/>turns useful signals into gated proposals]:::agent
+  Oracle[Oracle<br/>opt-in longitudinal context for tone/patterns]:::agent
+  Approval{Operator approval<br/>for side effects}:::gate
+  Answer[Grounded answer / action]:::output
+  Logs[(Outputs + Logs<br/>audit trail)]:::ledger
+
+  Human --> Topics --> Raw
+  Human --> Models --> Profiles[Bind-ready profiles<br/>librarian · scout · architect · oracle]:::process
+  Existing --> Raw
+  Profiles --> Scout
+  Profiles --> Librarian
+  Profiles --> Architect
+  Profiles --> Oracle
+
+  Canon -->|gaps + missions| Scout
+  Scout -->|signals + sources| Raw
+  Raw --> Librarian
+  Librarian -->|stable knowledge| Canon
+  Librarian -->|work evidence| Logs
+  Canon --> Preflight --> Answer
+  Oracle -. context, not authority .-> Preflight
+  Librarian -->|actionable opportunities| Architect
+  Architect -->|proposal + risk/evidence| Approval
+  Approval -->|approved only| Answer
+  Architect --> Logs
+
+  classDef human fill:#fff7ed,stroke:#f97316,color:#111827;
+  classDef input fill:#eff6ff,stroke:#3b82f6,color:#111827;
+  classDef raw fill:#fef3c7,stroke:#f59e0b,color:#111827;
+  classDef agent fill:#ecfeff,stroke:#06b6d4,color:#111827;
+  classDef canon fill:#ecfdf5,stroke:#10b981,color:#111827;
+  classDef process fill:#f5f3ff,stroke:#8b5cf6,color:#111827;
+  classDef gate fill:#fff1f2,stroke:#f43f5e,color:#111827;
+  classDef output fill:#f0fdf4,stroke:#22c55e,color:#111827;
+  classDef ledger fill:#f8fafc,stroke:#64748b,color:#111827;
+```
+
+The important contract: **Scout collects**, **Librarian decides canon**, **Architect proposes**, and **Oracle adapts context**. Anything with side effects still waits for explicit operator approval.
 
 ## Agent names
 

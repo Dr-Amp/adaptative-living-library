@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.1 - 2026-05-24
+
+### Added
+
+- Mermaid architecture diagrams in `README.md` and `docs/architecture.md` showing onboarding, raw/inbox, canon, preflight, and the Scout/Librarian/Architect/Oracle roles.
+
 ## v0.3.0 - 2026-05-24
 
 Standardized the four public agent names.

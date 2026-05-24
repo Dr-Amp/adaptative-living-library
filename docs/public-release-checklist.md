@@ -23,7 +23,7 @@ python3 scripts/release_check.py --deny "YOUR_NAME" --deny "YOUR_SERVER" --deny 
 ```bash
 gh repo create adaptative-living-library --public --source . --remote origin --push
 gh repo edit --enable-wiki=false --enable-issues=true --add-topic hermes-agent --add-topic adaptative-living-library --add-topic obsidian --add-topic knowledge-management
-gh release create v0.3.0 --title "v0.3.0" --notes-file CHANGELOG.md
+gh release create v0.3.1 --title "v0.3.1" --notes-file CHANGELOG.md
 ```
 
 Only publish after your local denylist passes.

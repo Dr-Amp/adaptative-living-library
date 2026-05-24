@@ -1,6 +1,6 @@
 name: adaptative-living-library
-version: 0.3.0
-status: naming-onboarding-beta
+version: 0.3.1
+status: diagram-onboarding-beta
 summary: Privacy-safe Hermes Agent template for an Adaptative Living Library with Scout, Librarian, Architect, and Oracle profiles.
 hermes_min_version: unknown
 components:

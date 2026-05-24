@@ -6,7 +6,7 @@ area: ops
 subarea: autonomous-proposal-gate
 tags: [runbook, living-library, hermes]
 confidence: high
-related: ['[[Concepts/scout-librarian-autonomous-relic-architecture]]', '[[wiki/Index]]']
+related: ['[[Concepts/scout-librero-autonomous-relic-architecture]]', '[[wiki/Index]]']
 ---
 # Autonomous Proposal Gate
 
@@ -31,4 +31,4 @@ Autonomous Drive proposes improvements only after duplicate checks and risk clas
 - active memory writes
 - external publishing
 
-Related: [[Concepts/scout-librarian-autonomous-relic-architecture]]
+Related: [[Concepts/scout-librero-autonomous-relic-architecture]]

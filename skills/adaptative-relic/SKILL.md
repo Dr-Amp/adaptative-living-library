@@ -1,9 +1,9 @@
 ---
-name: ops-relic-lite
+name: adaptative-relic
 description: "Use opt-in longitudinal context to adapt tone without exposing or overclaiming patterns."
 version: 0.1.0
 ---
-# Ops Relic Lite
+# Adaptative Relic
 
 Use opt-in longitudinal context to adapt tone without exposing or overclaiming patterns.
 

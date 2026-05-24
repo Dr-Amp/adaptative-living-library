@@ -1,18 +1,18 @@
 ---
-title: Relic Lite Pattern Notes
+title: Relic Pattern Notes
 type: runbook
 status: active
 area: ops
-subarea: relic-lite-pattern-notes
+subarea: relic-pattern-notes
 tags: [runbook, living-library, hermes]
 confidence: high
-related: ['[[Concepts/scout-librarian-autonomous-relic-architecture]]', '[[wiki/Index]]']
+related: ['[[Concepts/scout-librero-autonomous-relic-architecture]]', '[[wiki/Index]]']
 ---
-# Relic Lite Pattern Notes
+# Relic Pattern Notes
 
 ## Purpose
 
-Relic Lite stores opt-in longitudinal observations as hypotheses with confidence. It adapts tone/context but does not present portraits unless asked.
+Relic stores opt-in longitudinal observations as hypotheses with confidence. It adapts tone/context but does not present portraits unless asked.
 
 ## Procedure
 
@@ -31,4 +31,4 @@ Relic Lite stores opt-in longitudinal observations as hypotheses with confidence
 - active memory writes
 - external publishing
 
-Related: [[Concepts/scout-librarian-autonomous-relic-architecture]]
+Related: [[Concepts/scout-librero-autonomous-relic-architecture]]

@@ -1,14 +1,14 @@
 ---
-title: Librarian Curation Loop
+title: Librero Curation Loop
 type: runbook
 status: active
 area: ops
-subarea: librarian-curation-loop
+subarea: librero-curation-loop
 tags: [runbook, living-library, hermes]
 confidence: high
-related: ['[[Concepts/scout-librarian-autonomous-relic-architecture]]', '[[wiki/Index]]']
+related: ['[[Concepts/scout-librero-autonomous-relic-architecture]]', '[[wiki/Index]]']
 ---
-# Librarian Curation Loop
+# Librero Curation Loop
 
 ## Purpose
 
@@ -31,4 +31,4 @@ Review inbox/raw material, classify it, promote only durable knowledge, update i
 - active memory writes
 - external publishing
 
-Related: [[Concepts/scout-librarian-autonomous-relic-architecture]]
+Related: [[Concepts/scout-librero-autonomous-relic-architecture]]

@@ -2,7 +2,7 @@ param(
   [switch]$DryRun,
   [switch]$Apply,
   [string]$Target = "$HOME/.hermes",
-  [string]$LibraryName = "living-ops",
+  [string]$LibraryName = "adaptative-living-library",
   [string]$OperatorName = "Operator",
   [switch]$InstallSkills
 )

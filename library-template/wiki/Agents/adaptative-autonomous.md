@@ -1,14 +1,14 @@
 ---
-title: Ops Autonomous Drive
+title: Adaptative Autonomous
 type: agent
 status: active
 area: ops
 subarea: agents
 tags: [agent, hermes, living-library]
 confidence: high
-related: ['[[Concepts/scout-librarian-autonomous-relic-architecture]]', '[[Runbooks/library-preflight-routing]]']
+related: ['[[Concepts/scout-librero-autonomous-relic-architecture]]', '[[Runbooks/library-preflight-routing]]']
 ---
-# Ops Autonomous Drive
+# Adaptative Autonomous
 
 Reads canon and recent evidence, then proposes operational improvements. It does not apply risky changes without approval.
 
@@ -19,4 +19,4 @@ Reads canon and recent evidence, then proposes operational improvements. It does
 - Ask before side effects.
 - Keep user-facing output compact.
 
-Related: [[Concepts/scout-librarian-autonomous-relic-architecture]], [[Runbooks/librarian-curation-loop]]
+Related: [[Concepts/scout-librero-autonomous-relic-architecture]], [[Runbooks/librero-curation-loop]]

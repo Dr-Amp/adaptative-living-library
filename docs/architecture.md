@@ -1,22 +1,24 @@
 # Architecture
 
-Hermes Living Ops Pack uses a simple promotion pipeline:
+Adaptative Living Library uses a simple promotion pipeline:
 
 ```text
-raw signal
-  -> inbox/quarantine
-  -> librarian review
+explicit interests + session/memory scan
+  -> raw onboarding candidates
+  -> Adaptative Scout missions
+  -> Adaptative Librero review
   -> stable canon page
   -> cheap preflight lookup
   -> grounded agent answer/action
+  -> Adaptative Autonomous proposal when useful now
 ```
 
 ## Roles
 
-- **Ops Librarian** owns curation, de-duplication, contradictions, and promotion.
-- **Ops Scout** collects signals but does not decide canon.
-- **Ops Autonomous Drive** proposes changes but does not execute risky side effects by default.
-- **Ops Relic Lite** tracks patterns as opt-in context, not as authority.
+- **Adaptative Scout** collects signals but does not decide canon.
+- **Adaptative Librero** owns curation, de-duplication, contradictions, and promotion.
+- **Adaptative Autonomous** proposes changes but does not execute risky side effects by default.
+- **Adaptative Relic** tracks opt-in longitudinal patterns as context, not as authority.
 
 ## Knowledge layers
 
@@ -24,6 +26,10 @@ raw signal
 - **Inbox:** human/agent submissions waiting for review.
 - **Ledger/output:** dated evidence of work done.
 - **Canon:** stable decisions, failures, runbooks, concepts, maps, and indexes.
+
+## Why onboarding exists
+
+A living library should not start blank. The operator gives explicit topics, chooses model routing, and optionally lets the onboarding script scan local sessions/memory read-only. The result is raw source material, not canon.
 
 ## Why preflight exists
 

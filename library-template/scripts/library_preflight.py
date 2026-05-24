@@ -34,7 +34,7 @@ def split_fm(text: str):
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument('query', nargs='+')
-    ap.add_argument('--root', default=str(Path.home() / '.hermes' / 'libraries' / 'living-ops'))
+    ap.add_argument('--root', default=str(Path.home() / '.hermes' / 'libraries' / 'adaptative-living-library'))
     ap.add_argument('--limit', type=int, default=8)
     args = ap.parse_args()
     root = Path(args.root).expanduser().resolve()
@@ -65,7 +65,7 @@ def main() -> int:
                 score += 1
             rows.append((score, ptype, rel, meta.get('title', p.stem)))
     rows.sort(key=lambda r: (-r[0], r[2]))
-    print(f'Living Ops preflight: {len(rows)} matches / root={root}')
+    print(f'Adaptative Living Library preflight: {len(rows)} matches / root={root}')
     for score, ptype, rel, title in rows[:args.limit]:
         print(f'- {score:>3} · {ptype or "?"} · {rel} · {title}')
     if not rows:

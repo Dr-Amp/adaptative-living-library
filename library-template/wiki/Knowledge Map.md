@@ -10,7 +10,7 @@ confidence: high
 # Knowledge Map
 
 ```text
-Scout -> Inbox/Raw -> Librarian -> Canon -> Preflight -> Better answers
+Scout -> Inbox/Raw -> Librero -> Canon -> Preflight -> Better answers
                          |
                          v
                 Autonomous proposals
@@ -18,11 +18,11 @@ Scout -> Inbox/Raw -> Librarian -> Canon -> Preflight -> Better answers
                          v
                   Human approval gate
 
-Relic Lite observes patterns and adapts tone/context only when useful.
+Relic observes patterns and adapts tone/context only when useful.
 ```
 
 Related:
 
-- [[Concepts/scout-librarian-autonomous-relic-architecture]]
+- [[Concepts/scout-librero-autonomous-relic-architecture]]
 - [[Runbooks/library-preflight-routing]]
-- [[Runbooks/librarian-curation-loop]]
+- [[Runbooks/librero-curation-loop]]

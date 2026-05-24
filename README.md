@@ -1,106 +1,132 @@
-# Hermes Living Ops Pack
+# Adaptative Living Library
 
-A privacy-safe starter pack for building a **Living Operations Library** around Hermes Agent.
+A privacy-safe starter pack for building an **Adaptative Living Library** around Hermes Agent: a local Markdown knowledge base plus four bind-ready agent profiles.
 
 It packages an operating pattern, not anyone's private data:
 
-- **Librarian**: reviews noisy notes and promotes stable knowledge.
-- **Scout**: collects external or internal signals into quarantine lanes.
-- **Autonomous Drive**: turns useful signals into gated recommendations.
-- **Relic Lite**: captures longitudinal patterns as opt-in, read-only context.
-- **Living Library**: an Obsidian-friendly Markdown vault with areas, subareas, tags, decisions, failures, runbooks, maps, and lints.
+- **Adaptative Scout**: researches topics and gathers signals into raw/inbox lanes.
+- **Adaptative Librero**: curates raw notes into stable decisions, failures, runbooks, concepts, and maps.
+- **Adaptative Autonomous**: turns useful signals into gated improvement proposals.
+- **Adaptative Relic**: keeps opt-in longitudinal context for tone and patterns, without diagnosis or hidden memory writes.
 
 ## Status
 
-`v0.1.0` template release. It is intentionally conservative:
+`v0.2.0` onboarding beta. Conservative by default:
 
 - dry-run first;
 - no automatic crons;
 - no gateway restarts;
-- no model/provider changes;
+- no model/provider changes unless the operator runs onboarding with `--apply`;
 - no active memory writes;
-- no copied private data.
+- no copied private data in the repository.
 
 ## What this repo is
 
 A template and installer for a Hermes knowledge operating system:
 
 ```text
-signals -> inbox/quarantine -> Librarian review -> canon pages -> cheap preflight before answers
+sessions/memory/topics -> raw onboarding scan -> Scout missions -> Librero canon -> preflight before answers -> Autonomous proposals when useful
 ```
 
 Use it when you want agents to stop relying on scattered chat history and start checking a curated local wiki before answering or acting.
 
-## What this repo is not
+## Agent names
 
-- Not a dump of a real `.hermes` directory.
-- Not a prefilled memory database.
-- Not a replacement for Hermes Agent.
-- Not an autonomous-service installer by default.
-- Not a public backup system for private notes.
+The pack creates these profiles and skills:
 
-## Architecture
+- `adaptative-scout` — **Adaptative Scout**
+- `adaptative-librero` — **Adaptative Librero**
+- `adaptative-autonomous` — **Adaptative Autonomous**
+- `adaptative-relic` — **Adaptative Relic**
 
-```text
-Living Ops Pack
-├─ library-template/        # public-safe Markdown vault
-├─ profiles/                # optional Hermes profile templates
-├─ skills/                  # generic skills for the four roles
-├─ scripts/                 # installer, sanitizer, lint, preflight
-├─ sync-guides/             # Obsidian/Syncthing/mobile guides
-└─ tests/                   # structural and publish-safety checks
-```
-
-The core loop is deliberately boring and auditable:
-
-1. Collect raw signals into inbox/quarantine.
-2. Curate only durable knowledge into canon pages.
-3. Record decisions, failures, runbooks, and open questions.
-4. Run a cheap local preflight before non-trivial answers.
-5. Keep private memory stores separate from publishable wiki content.
+They are installed as profiles so you can later bind them to Telegram topics, Discord channels, cron jobs, or local CLI usage.
 
 ## Quick start
 
 Dry-run first:
 
 ```bash
-git clone https://github.com/YOUR_USER/hermes-living-ops-pack
-cd hermes-living-ops-pack
+git clone https://github.com/YOUR_USER/adaptative-living-library
+cd adaptative-living-library
 ./install.sh --dry-run
 ```
 
-Install locally only after reading the output:
+Install locally:
 
 ```bash
-./install.sh --apply --target ~/.hermes --library-name living-ops
+./install.sh --apply --target ~/.hermes --library-name adaptative-living-library --install-skills
 ```
 
-Optionally install the generic skills too:
+Run onboarding in dry-run mode:
 
 ```bash
-./install.sh --apply --target ~/.hermes --library-name living-ops --install-skills
+python3 scripts/onboard.py \
+  --target ~/.hermes \
+  --library-name adaptative-living-library \
+  --topic "AI agents" \
+  --topic "creative video workflows" \
+  --scan-existing
 ```
+
+Apply onboarding after reviewing the dry-run output:
+
+```bash
+python3 scripts/onboard.py \
+  --apply \
+  --target ~/.hermes \
+  --library-name adaptative-living-library \
+  --operator-name "Operator" \
+  --provider openrouter \
+  --main-model "anthropic/claude-sonnet-4" \
+  --scout-model "openai/gpt-4.1-mini" \
+  --librero-model "anthropic/claude-sonnet-4" \
+  --autonomous-model "anthropic/claude-sonnet-4" \
+  --relic-model "openai/gpt-4.1-mini" \
+  --topic "AI agents" \
+  --topic "creative video workflows" \
+  --scan-existing
+```
+
+If you already have an Obsidian vault, link it directly:
+
+```bash
+python3 scripts/onboard.py --apply --obsidian-vault ~/Documents/Obsidian/MyVault
+```
+
+By default this creates a symlink named `Adaptative Living Library` inside the vault. If symlinks are unavailable, it writes a local linking note instead.
+
+## What onboarding does
+
+`scripts/onboard.py` is local and dry-run by default. With `--apply` it:
+
+1. records chosen models for Scout, Librero, Autonomous, and Relic;
+2. records explicit topics of interest for Scout;
+3. scans local session/memory paths read-only when `--scan-existing` is enabled;
+4. writes an initial raw onboarding note under `raw/onboarding/`;
+5. writes `onboarding/adaptative-config.yaml` and `onboarding/profile-bindings.yaml`;
+6. creates/updates bind-ready profile configs under `~/.hermes/profiles/adaptative-*`;
+7. optionally links an Obsidian vault.
+
+It does **not** create crons, restart the gateway, edit global Hermes config, call LLMs, upload data, or write active memory stores.
 
 ## Installed layout
 
 ```text
 ~/.hermes/
-├── libraries/living-ops/        # Markdown Living Library
-├── profiles/ops-librarian/      # optional Hermes profile template
-├── profiles/ops-scout/
-├── profiles/ops-autonomous-drive/
-├── profiles/ops-relic-lite/
-└── skills/community/living-ops/ # only if --install-skills is passed
+├── libraries/adaptative-living-library/        # Markdown Living Library
+├── profiles/adaptative-librero/                # profile ready to bind
+├── profiles/adaptative-scout/
+├── profiles/adaptative-autonomous/
+├── profiles/adaptative-relic/
+└── skills/community/adaptative-living-library/ # only if --install-skills is passed
 ```
-
-The installer backs up overwritten files under `~/.hermes/backups/hermes-living-ops-pack-*` when `--apply` is used.
 
 ## Cheap preflight policy
 
-For non-trivial questions, an agent should check the local Living Library before answering:
+For non-trivial questions, an agent should check the local Adaptative Living Library before answering:
 
 ```bash
-python3 ~/.hermes/libraries/living-ops/scripts/library_preflight.py "<query>" --limit 8
+python3 ~/.hermes/libraries/adaptative-living-library/scripts/library_preflight.py "<query>" --limit 8
 ```
 
 If relevant runbooks, decisions, failures, concepts, agents, or memory pages appear, read those first. Do **not** load the whole vault into context.
@@ -113,16 +139,6 @@ Run the release-safe checks:
 python3 scripts/release_check.py
 ```
 
-Or run checks individually:
-
-```bash
-python3 scripts/sanitize_check.py .
-python3 scripts/lint_library.py library-template
-python3 scripts/library_preflight.py "how should the librarian promote failures" --root library-template --limit 5
-./install.sh --dry-run
-pytest -q tests
-```
-
 Before publishing your fork, add your own denylist terms:
 
 ```bash
@@ -131,38 +147,11 @@ python3 scripts/release_check.py --deny "YOUR_NAME" --deny "YOUR_SERVER" --deny 
 
 ## Privacy stance
 
-This pack is intentionally generic. The sanitizer checks for common leaks:
-
-- real home paths;
-- private IPs;
-- common token formats;
-- secret assignments;
-- SSH/private keys;
-- accidentally tracked `.env`, database, dump, log, backup, or key files;
-- personal denylist terms passed by the operator.
-
-No scanner can prove privacy. Treat the sanitizer as a guardrail, not a guarantee.
+This pack is intentionally generic. The sanitizer checks for common leaks, but no scanner can prove privacy. Treat it as a guardrail, not a guarantee.
 
 ## Sync and Obsidian
 
-See `sync-guides/` for:
-
-- Obsidian setup;
-- Syncthing on Windows, macOS, and Linux;
-- Möbius Sync on iPhone;
-- Syncthing-Fork on Android.
-
-Recommended model:
-
-```text
-canonical Library -> generated/synced mirror -> Obsidian on devices
-```
-
-Users write into `_INBOX_USER/`; agents promote safely into canon.
-
-## Public-release checklist
-
-See `docs/public-release-checklist.md`.
+See `sync-guides/` and `docs/onboarding.md`. Users can either keep the library under `~/.hermes/libraries/...` and symlink it into Obsidian, or install the library directly inside an Obsidian vault if they understand the tradeoff.
 
 ## License
 

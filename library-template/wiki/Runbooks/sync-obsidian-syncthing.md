@@ -6,7 +6,7 @@ area: ops
 subarea: sync-obsidian-syncthing
 tags: [runbook, living-library, hermes]
 confidence: high
-related: ['[[Concepts/scout-librarian-autonomous-relic-architecture]]', '[[wiki/Index]]']
+related: ['[[Concepts/scout-librero-autonomous-relic-architecture]]', '[[wiki/Index]]']
 ---
 # Sync Obsidian + Syncthing
 
@@ -31,4 +31,4 @@ Use canonical library plus synced mirror. Humans write into inbox. Agents promot
 - active memory writes
 - external publishing
 
-Related: [[Concepts/scout-librarian-autonomous-relic-architecture]]
+Related: [[Concepts/scout-librero-autonomous-relic-architecture]]

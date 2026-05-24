@@ -6,7 +6,7 @@ area: autonomous-drive
 subarea: proposal-gate
 tags: [failure, autonomous-drive, noise-control]
 confidence: high
-related: ['[[Runbooks/autonomous-proposal-gate]]', '[[Decisions/scout-librarian-autonomous-delivery-ladder]]']
+related: ['[[Runbooks/autonomous-proposal-gate]]', '[[Decisions/scout-librero-autonomous-delivery-ladder]]']
 ---
 # Failure — Duplicate Autonomous Proposals
 

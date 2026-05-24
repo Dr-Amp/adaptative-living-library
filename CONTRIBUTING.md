@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for improving Hermes Living Ops Pack. Keep the project boring, safe, and publishable.
+Thanks for improving Adaptative Living Library. Keep the project boring, safe, and publishable.
 
 ## Rules
 

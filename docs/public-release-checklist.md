@@ -21,9 +21,9 @@ python3 scripts/release_check.py --deny "YOUR_NAME" --deny "YOUR_SERVER" --deny 
 ## Optional GitHub publication
 
 ```bash
-gh repo create hermes-living-ops-pack --public --source . --remote origin --push
-gh repo edit --enable-wiki=false --enable-issues=true --add-topic hermes-agent --add-topic living-library --add-topic obsidian --add-topic knowledge-management
-gh release create v0.1.0 --title "v0.1.0" --notes-file CHANGELOG.md
+gh repo create adaptative-living-library --public --source . --remote origin --push
+gh repo edit --enable-wiki=false --enable-issues=true --add-topic hermes-agent --add-topic adaptative-living-library --add-topic obsidian --add-topic knowledge-management
+gh release create v0.2.0 --title "v0.2.0" --notes-file CHANGELOG.md
 ```
 
 Only publish after your local denylist passes.

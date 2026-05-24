@@ -6,7 +6,7 @@ area: ops
 subarea: scout-signal-ingest
 tags: [runbook, living-library, hermes]
 confidence: high
-related: ['[[Concepts/scout-librarian-autonomous-relic-architecture]]', '[[wiki/Index]]']
+related: ['[[Concepts/scout-librero-autonomous-relic-architecture]]', '[[wiki/Index]]']
 ---
 # Scout Signal Ingest
 
@@ -31,4 +31,4 @@ Scout writes raw signals with source, timestamp, confidence, lane, and why it mi
 - active memory writes
 - external publishing
 
-Related: [[Concepts/scout-librarian-autonomous-relic-architecture]]
+Related: [[Concepts/scout-librero-autonomous-relic-architecture]]

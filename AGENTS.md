@@ -1,4 +1,4 @@
-# AGENTS.md — Hermes Living Ops Pack
+# AGENTS.md — Adaptative Living Library
 
 This repository must remain publish-safe. It is a template repo, not a private Hermes export.
 

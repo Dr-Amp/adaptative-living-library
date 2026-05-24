@@ -12,28 +12,28 @@ confidence: high
 ## Human navigation
 
 - [[Mapas/00 - Human Start]]
-- [[Mapas/Scout Librarian Autonomous Relic]]
+- [[Mapas/Scout Librero Autonomous Relic]]
 - [[Indexes/Index by Area and Subarea]]
 - [[Indexes/Index by Status and Confidence]]
 
 ## Core architecture
 
-- [[Concepts/scout-librarian-autonomous-relic-architecture]]
-- [[Agents/ops-librarian]]
-- [[Agents/ops-scout]]
-- [[Agents/ops-autonomous-drive]]
-- [[Agents/ops-relic-lite]]
+- [[Concepts/scout-librero-autonomous-relic-architecture]]
+- [[Agents/adaptative-librero]]
+- [[Agents/adaptative-scout]]
+- [[Agents/adaptative-autonomous]]
+- [[Agents/adaptative-relic]]
 
 ## Runbooks
 
 - [[Runbooks/library-preflight-routing]]
-- [[Runbooks/librarian-curation-loop]]
+- [[Runbooks/librero-curation-loop]]
 - [[Runbooks/scout-signal-ingest]]
 - [[Runbooks/autonomous-proposal-gate]]
-- [[Runbooks/relic-lite-pattern-notes]]
+- [[Runbooks/relic-pattern-notes]]
 - [[Runbooks/sync-obsidian-syncthing]]
 
 ## Safety memory
 
 - [[Failures/duplicate-autonomous-proposals]]
-- [[Decisions/scout-librarian-autonomous-delivery-ladder]]
+- [[Decisions/scout-librero-autonomous-delivery-ladder]]

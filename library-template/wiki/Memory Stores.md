@@ -17,6 +17,6 @@ Use separate stores for separate jobs:
 - **Task systems**: current work, not long-term truth.
 - **Raw/inbox**: unreviewed evidence.
 
-Rule: do not let raw logs become canon without Librarian review.
+Rule: do not let raw logs become canon without Librero review.
 
-Related: [[Runbooks/librarian-curation-loop]], [[Runbooks/library-preflight-routing]]
+Related: [[Runbooks/librero-curation-loop]], [[Runbooks/library-preflight-routing]]

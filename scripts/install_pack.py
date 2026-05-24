@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Safe installer for Hermes Living Ops Pack.
+"""Safe installer for Adaptative Living Library.
 
 Default is dry-run. Use --apply to write files. This script does not restart
 services, create crons, alter models/providers, or copy secrets.
@@ -53,17 +53,17 @@ def main() -> int:
     mode.add_argument('--dry-run', action='store_true', help='show what would be installed; default')
     mode.add_argument('--apply', action='store_true', help='write files')
     ap.add_argument('--target', default=str(Path.home() / '.hermes'))
-    ap.add_argument('--library-name', default='living-ops')
+    ap.add_argument('--library-name', default='adaptative-living-library')
     ap.add_argument('--operator-name', default='Operator')
-    ap.add_argument('--install-skills', action='store_true', help='copy generic skills into target skills/community/living-ops')
+    ap.add_argument('--install-skills', action='store_true', help='copy generic skills into target skills/community/adaptative-living-library')
     args = ap.parse_args()
 
     dry_run = not args.apply or args.dry_run
     target = Path(args.target).expanduser().resolve()
     ts = datetime.now().strftime('%Y%m%d-%H%M%S')
-    backup_root = target / 'backups' / f'hermes-living-ops-pack-{ts}'
+    backup_root = target / 'backups' / f'adaptative-living-library-{ts}'
 
-    print('Hermes Living Ops Pack installer')
+    print('Adaptative Living Library installer')
     print(f"target: {target}")
     print(f"library: {args.library_name}")
     print(f"mode: {'dry-run' if dry_run else 'apply'}")
@@ -76,7 +76,7 @@ def main() -> int:
               target=target, library_name=args.library_name, operator_name=args.operator_name,
               dry_run=dry_run, backup_root=backup_root)
     if args.install_skills:
-        copy_tree(ROOT / 'skills', target / 'skills' / 'community' / 'living-ops',
+        copy_tree(ROOT / 'skills', target / 'skills' / 'community' / 'adaptative-living-library',
                   target=target, library_name=args.library_name, operator_name=args.operator_name,
                   dry_run=dry_run, backup_root=backup_root)
 

@@ -1,9 +1,9 @@
 ---
-name: ops-autonomous-drive
+name: adaptative-autonomous
 description: "Propose operational improvements with duplicate checks and approval gates."
 version: 0.1.0
 ---
-# Ops Autonomous Drive
+# Adaptative Autonomous
 
 Propose operational improvements with duplicate checks and approval gates.
 

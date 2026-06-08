@@ -11,7 +11,7 @@ It packages an operating pattern, not anyone's private data:
 
 ## Status
 
-`v0.3.4` minimal architecture diagram + onboarding beta. Conservative by default:
+`v0.3.5` canon-hardening + onboarding beta. Conservative by default:
 
 - dry-run first;
 - no automatic crons;
@@ -147,6 +147,17 @@ python3 ~/.hermes/libraries/adaptative-living-library/scripts/library_preflight.
 ```
 
 If relevant runbooks, decisions, failures, concepts, agents, or memory pages appear, read those first. Do **not** load the whole vault into context.
+
+## Recent canon hardening
+
+The public template is kept in sync with later class-level lessons from real Living Library operations without copying private content.
+
+New in `v0.3.5`:
+
+- `library-template/wiki/Runbooks/memory-boundaries.md` — raw capture is evidence, not active memory; use a raw → summary → candidate → gate → canon/discard flow.
+- `library-template/wiki/Runbooks/serious-research-lane.md` — create durable research fronts with PIR, source registry, priority queue, explicit coverage gaps, and approval gates before side effects.
+
+See `docs/recent-canon-hardening.md` for the public-safe summary.
 
 ## Validation
 

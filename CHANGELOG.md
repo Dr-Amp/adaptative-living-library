@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.3.5 - 2026-06-08
+
+### Added
+
+- Added `library-template/wiki/Runbooks/memory-boundaries.md` to separate raw capture, outputs, canon, Oracle notes, and active memory writes.
+- Added `library-template/wiki/Runbooks/serious-research-lane.md` for durable research fronts with PIR, source registry, priority queue, Scout collection, Librarian promotion, explicit coverage gaps, and approval gates.
+- Added `docs/recent-canon-hardening.md` explaining the public-safe class-level lessons without copying private library content.
+
+### Safety
+
+- Keeps risky operations off by default: no scanners, crons, service restarts, provider/model changes, active memory writes, credential edits, or external side effects without approval.
+
 ## v0.3.4 - 2026-05-24
 
 ### Changed

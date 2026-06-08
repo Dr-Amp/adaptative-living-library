@@ -28,6 +28,8 @@ confidence: high
 
 - [[Runbooks/library-preflight-routing]]
 - [[Runbooks/librarian-curation-loop]]
+- [[Runbooks/memory-boundaries]]
+- [[Runbooks/serious-research-lane]]
 - [[Runbooks/scout-signal-ingest]]
 - [[Runbooks/architect-proposal-gate]]
 - [[Runbooks/oracle-pattern-notes]]

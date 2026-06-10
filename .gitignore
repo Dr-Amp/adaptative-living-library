@@ -14,6 +14,7 @@
 *.bak
 *.backup
 *.log
+.private-sync-state.json
 __pycache__/
 .pytest_cache/
 .DS_Store
@@ -21,3 +22,4 @@ __pycache__/
 # install artifacts
 .installed/
 .tmp/
+.private-sync-denylist.txt
